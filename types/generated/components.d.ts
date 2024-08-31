@@ -14,7 +14,8 @@ export interface SectionsHero1 extends Schema.Component {
       Attribute.DefaultTo<'gray'>;
     header: Attribute.String & Attribute.DefaultTo<'Hero 1'>;
     headerBold: Attribute.String;
-    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']>;
+    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
+      Attribute.DefaultTo<'h1'>;
     headerColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &

@@ -35,7 +35,8 @@
         "h4",
         "h5",
         "h6"
-      ]
+      ],
+      "default": "h1"
     },
     "headerColor": {
       "type": "enumeration",
@@ -68,11 +69,12 @@
       "type": "string"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     }
   }
 }
