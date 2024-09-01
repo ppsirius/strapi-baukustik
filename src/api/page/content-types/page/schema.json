@@ -20,15 +20,16 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "pageName"
+      "targetField": "pageName",
+      "required": true
     },
     "sections": {
       "type": "dynamiczone",
-      "components": [
-        "sections.hero1",
-        "sections.block1"
-      ],
+      "components": ["sections.hero1", "sections.block1", "sections.block2"],
       "pluginOptions": {}
+    },
+    "description": {
+      "type": "string"
     }
   }
 }

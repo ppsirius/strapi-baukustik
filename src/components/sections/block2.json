@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_sections_block1s",
+  "collectionName": "components_sections_block2s",
   "info": {
-    "displayName": "Block1",
+    "displayName": "Block2",
     "description": ""
   },
   "options": {},
@@ -26,23 +26,11 @@
       "type": "media",
       "multiple": true,
       "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": [
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6"
-      ],
+      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
       "default": "h2"
     },
     "header": {
