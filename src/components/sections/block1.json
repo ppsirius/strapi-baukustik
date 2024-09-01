@@ -1,0 +1,101 @@
+{
+  "collectionName": "components_sections_block1s",
+  "info": {
+    "displayName": "Block1",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ]
+    },
+    "blockImageHeight": {
+      "type": "boolean",
+      "default": false
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "headerAs": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ]
+    },
+    "header": {
+      "type": "string"
+    },
+    "headerColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ]
+    },
+    "paragraph1": {
+      "type": "text"
+    },
+    "paragraph2": {
+      "type": "text"
+    },
+    "paragraphColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ]
+    },
+    "linkColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ]
+    },
+    "linkUrl1": {
+      "type": "string"
+    },
+    "linkText1": {
+      "type": "string"
+    },
+    "linkUrl2": {
+      "type": "string"
+    },
+    "linkText2": {
+      "type": "string"
+    }
+  }
+}

@@ -10,21 +10,13 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
     "pageName": {
       "type": "string",
       "required": true,
       "unique": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "pluginOptions": {}
     },
     "slug": {
       "type": "uid",
@@ -33,13 +25,10 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "sections.hero1"
+        "sections.hero1",
+        "sections.block1"
       ],
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "pluginOptions": {}
     }
   }
 }
