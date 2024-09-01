@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_sections_block2s",
+  "collectionName": "components_sections_block4s",
   "info": {
-    "displayName": "Block2",
+    "displayName": "Block4",
     "description": ""
   },
   "options": {},
@@ -35,7 +35,7 @@
     },
     "header": {
       "type": "string",
-      "default": "Blok 2",
+      "default": "Blok 4",
       "required": true
     },
     "headerColor": {

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_other_paragraph_links",
+  "info": {
+    "displayName": "paragraphLinks"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "default": "Tynki Sonaspray® →"
+    },
+    "url": {
+      "type": "string",
+      "required": true,
+      "default": "#"
+    }
+  }
+}

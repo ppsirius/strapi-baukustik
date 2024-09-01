@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_sections_block2s",
+  "collectionName": "components_sections_block7s",
   "info": {
-    "displayName": "Block2",
+    "displayName": "Block7",
     "description": ""
   },
   "options": {},
@@ -26,7 +26,7 @@
       "type": "media",
       "multiple": true,
       "required": true,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": ["images"]
     },
     "headerAs": {
       "type": "enumeration",
@@ -35,7 +35,7 @@
     },
     "header": {
       "type": "string",
-      "default": "Blok 2",
+      "default": "Blok 7",
       "required": true
     },
     "headerColor": {
@@ -94,6 +94,12 @@
     },
     "linkText2": {
       "type": "string"
+    },
+    "paragraphLinks": {
+      "displayName": "paragraphLinks",
+      "type": "component",
+      "repeatable": true,
+      "component": "other.paragraph-links"
     }
   }
 }
