@@ -320,9 +320,206 @@ export interface SectionsHero1 extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'white'>;
-    linkUrl1: Attribute.String;
-    linkText1: Attribute.String;
-    images: Attribute.Media;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText1: Attribute.String & Attribute.DefaultTo<'Zobacz produkty \u2192'>;
+    images: Attribute.Media & Attribute.Required;
+  };
+}
+
+export interface SectionsHero2 extends Schema.Component {
+  collectionName: 'components_sections_hero2s';
+  info: {
+    displayName: 'Hero2';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'gray'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText1: Attribute.String & Attribute.DefaultTo<'Us\u0142ugi \u2192'>;
+    images: Attribute.Media & Attribute.Required;
+    linkUrl2: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText2: Attribute.String & Attribute.DefaultTo<'Produkty \u2192'>;
+  };
+}
+
+export interface SectionsHero3 extends Schema.Component {
+  collectionName: 'components_sections_hero3s';
+  info: {
+    displayName: 'Hero3';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'gray'>;
+    header: Attribute.String & Attribute.DefaultTo<'Hero 3'>;
+    headerBold: Attribute.String;
+    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
+      Attribute.DefaultTo<'h1'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText1: Attribute.String & Attribute.DefaultTo<'Zobacz produkty \u2192'>;
+    images: Attribute.Media & Attribute.Required;
+  };
+}
+
+export interface SectionsHero4 extends Schema.Component {
+  collectionName: 'components_sections_hero4s';
+  info: {
+    displayName: 'Hero4';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'gray'>;
+    header: Attribute.String & Attribute.DefaultTo<'Hero 4'>;
+    headerBold: Attribute.String;
+    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
+      Attribute.DefaultTo<'h1'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText1: Attribute.String & Attribute.DefaultTo<'Zobacz produkty \u2192'>;
+    images: Attribute.Media & Attribute.Required;
+  };
+}
+
+export interface SectionsHero5 extends Schema.Component {
+  collectionName: 'components_sections_hero5s';
+  info: {
+    displayName: 'Hero5';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    paragraphColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    paragraph: Attribute.Text & Attribute.Required;
+  };
+}
+
+export interface SectionsHero6 extends Schema.Component {
+  collectionName: 'components_sections_hero6s';
+  info: {
+    displayName: 'Hero6';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'gray'>;
+    header: Attribute.String & Attribute.DefaultTo<'Hero 6'>;
+    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
+      Attribute.DefaultTo<'h1'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText1: Attribute.String &
+      Attribute.DefaultTo<'Zobacz realizacj\u0119 \u2192'>;
+    images: Attribute.Media & Attribute.Required;
+  };
+}
+
+export interface SectionsHero7 extends Schema.Component {
+  collectionName: 'components_sections_hero7s';
+  info: {
+    displayName: 'Hero7';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'gray'>;
+    header: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Skontaktuj si\u0119 z nami:'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    text: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
+    headerForm: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Zadaj nam pytanie:'>;
+    companyName: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Baukustik sp. z o.o.'>;
+    addressStreet: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'\u017Belechowska 2'>;
+    address: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'04-854 Warszawa'>;
+    phone: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'+48 732 922 622'>;
+    email: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'info@baukustik.com'>;
+    bankAccounts: Attribute.Text;
+    formName: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Twoje Imi\u0119 i Nazwisko*'>;
+    formCompany: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Nazwa firmy'>;
+    formPhone: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Telefon'>;
+    formEmail: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Adres e-mail*'>;
+    formMessage: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Tre\u015B\u0107 wiadomo\u015Bci*'>;
+    formSubmit: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Wy\u015Blij \u2192'>;
   };
 }
 
@@ -338,6 +535,12 @@ declare module '@strapi/types' {
       'sections.block6': SectionsBlock6;
       'sections.block7': SectionsBlock7;
       'sections.hero1': SectionsHero1;
+      'sections.hero2': SectionsHero2;
+      'sections.hero3': SectionsHero3;
+      'sections.hero4': SectionsHero4;
+      'sections.hero5': SectionsHero5;
+      'sections.hero6': SectionsHero6;
+      'sections.hero7': SectionsHero7;
     }
   }
 }

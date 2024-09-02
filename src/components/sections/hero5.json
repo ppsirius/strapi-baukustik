@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_sections_hero5s",
+  "info": {
+    "displayName": "Hero5",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
+    },
+    "paragraphColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "white"
+    },
+    "paragraph": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

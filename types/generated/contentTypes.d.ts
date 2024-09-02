@@ -385,7 +385,13 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.block4',
         'sections.block5',
         'sections.block6',
-        'sections.block7'
+        'sections.block7',
+        'sections.hero2',
+        'sections.hero3',
+        'sections.hero4',
+        'sections.hero5',
+        'sections.hero6',
+        'sections.hero7'
       ]
     >;
     description: Attribute.String;

@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_sections_hero1s",
+  "collectionName": "components_sections_hero4s",
   "info": {
-    "displayName": "Hero1",
+    "displayName": "Hero4",
     "icon": "picture",
     "description": ""
   },
@@ -21,21 +21,14 @@
     },
     "header": {
       "type": "string",
-      "default": "Hero 1"
+      "default": "Hero 4"
     },
     "headerBold": {
       "type": "string"
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": [
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6"
-      ],
+      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
       "default": "h1"
     },
     "headerColor": {
@@ -74,9 +67,7 @@
       "type": "media",
       "multiple": true,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     }
   }
 }

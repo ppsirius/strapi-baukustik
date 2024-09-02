@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_sections_hero1s",
+  "collectionName": "components_sections_hero2s",
   "info": {
-    "displayName": "Hero1",
+    "displayName": "Hero2",
     "icon": "picture",
     "description": ""
   },
@@ -18,37 +18,6 @@
         "very-light-gray"
       ],
       "default": "gray"
-    },
-    "header": {
-      "type": "string",
-      "default": "Hero 1"
-    },
-    "headerBold": {
-      "type": "string"
-    },
-    "headerAs": {
-      "type": "enumeration",
-      "enum": [
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6"
-      ],
-      "default": "h1"
-    },
-    "headerColor": {
-      "type": "enumeration",
-      "enum": [
-        "white",
-        "green",
-        "black",
-        "gray",
-        "light-gray",
-        "very-light-gray"
-      ],
-      "default": "white"
     },
     "linkColor": {
       "type": "enumeration",
@@ -68,7 +37,7 @@
     },
     "linkText1": {
       "type": "string",
-      "default": "Zobacz produkty →"
+      "default": "Usługi →"
     },
     "images": {
       "type": "media",
@@ -77,6 +46,14 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "linkUrl2": {
+      "type": "string",
+      "default": "#"
+    },
+    "linkText2": {
+      "type": "string",
+      "default": "Produkty →"
     }
   }
 }

@@ -1,0 +1,115 @@
+{
+  "collectionName": "components_sections_hero7s",
+  "info": {
+    "displayName": "Hero7",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "gray"
+    },
+    "header": {
+      "type": "string",
+      "default": "Skontaktuj się z nami:",
+      "required": true
+    },
+    "headerColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
+    },
+    "text": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "black"
+    },
+    "headerForm": {
+      "type": "string",
+      "required": true,
+      "default": "Zadaj nam pytanie:"
+    },
+    "companyName": {
+      "type": "string",
+      "default": "Baukustik sp. z o.o.",
+      "required": true
+    },
+    "addressStreet": {
+      "type": "string",
+      "default": "Żelechowska 2",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "default": "04-854 Warszawa",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "default": "+48 732 922 622",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "default": "info@baukustik.com",
+      "required": true
+    },
+    "bankAccounts": {
+      "type": "text"
+    },
+    "formName": {
+      "type": "string",
+      "default": "Twoje Imię i Nazwisko*",
+      "required": true
+    },
+    "formCompany": {
+      "type": "string",
+      "default": "Nazwa firmy",
+      "required": true
+    },
+    "formPhone": {
+      "type": "string",
+      "default": "Telefon",
+      "required": true
+    },
+    "formEmail": {
+      "type": "string",
+      "default": "Adres e-mail*",
+      "required": true
+    },
+    "formMessage": {
+      "type": "string",
+      "default": "Treść wiadomości*",
+      "required": true
+    },
+    "formSubmit": {
+      "type": "string",
+      "default": "Wyślij →",
+      "required": true
+    }
+  }
+}

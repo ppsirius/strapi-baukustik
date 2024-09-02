@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_sections_hero1s",
+  "collectionName": "components_sections_hero6s",
   "info": {
-    "displayName": "Hero1",
+    "displayName": "Hero6",
     "icon": "picture",
     "description": ""
   },
@@ -21,10 +21,7 @@
     },
     "header": {
       "type": "string",
-      "default": "Hero 1"
-    },
-    "headerBold": {
-      "type": "string"
+      "default": "Hero 6"
     },
     "headerAs": {
       "type": "enumeration",
@@ -68,7 +65,7 @@
     },
     "linkText1": {
       "type": "string",
-      "default": "Zobacz produkty →"
+      "default": "Zobacz realizację →"
     },
     "images": {
       "type": "media",
