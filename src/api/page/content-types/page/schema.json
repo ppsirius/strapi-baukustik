@@ -45,6 +45,12 @@
     },
     "description": {
       "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "subCategory": {
+      "type": "string"
     }
   }
 }

@@ -471,7 +471,7 @@ export interface SectionsHero7 extends Schema.Component {
     bg: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'gray'>;
+      Attribute.DefaultTo<'white'>;
     header: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Skontaktuj si\u0119 z nami:'>;

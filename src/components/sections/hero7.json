@@ -17,7 +17,7 @@
         "light-gray",
         "very-light-gray"
       ],
-      "default": "gray"
+      "default": "white"
     },
     "header": {
       "type": "string",
