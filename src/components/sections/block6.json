@@ -16,21 +16,33 @@
         "light-gray",
         "very-light-gray"
       ],
-      "default": "light-gray"
+      "default": "gray"
     },
-    "blockImageHeight": {
+    "bgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "bgMask": {
       "type": "boolean",
       "default": false
     },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": ["images"]
-    },
     "headerAs": {
       "type": "enumeration",
-      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
       "default": "h2"
     },
     "header": {
@@ -48,17 +60,9 @@
         "light-gray",
         "very-light-gray"
       ],
-      "default": "green"
+      "default": "white"
     },
-    "paragraph1": {
-      "type": "text",
-      "default": "Tu będzie akapit lub dwa tekstu, ilustrowane nieobowiązkowymI, kwadratowymi obrazkami (slideshow). Jeśli nie ma obrazka, zostaje kolor tła. Kontrolki włączają się na hover, podpis (jeśli jest) jest widoczny cały czas. ",
-      "required": true
-    },
-    "paragraph2": {
-      "type": "text"
-    },
-    "paragraphColor": {
+    "paragraphLinkColor": {
       "type": "enumeration",
       "enum": [
         "white",
@@ -68,7 +72,7 @@
         "light-gray",
         "very-light-gray"
       ],
-      "default": "black"
+      "default": "white"
     },
     "linkColor": {
       "type": "enumeration",
@@ -80,7 +84,7 @@
         "light-gray",
         "very-light-gray"
       ],
-      "default": "green"
+      "default": "white"
     },
     "linkUrl1": {
       "type": "string"
@@ -98,7 +102,8 @@
     "paragraphLinks": {
       "type": "component",
       "repeatable": true,
-      "component": "other.paragraph-links"
+      "component": "other.paragraph-links",
+      "required": true
     }
   }
 }

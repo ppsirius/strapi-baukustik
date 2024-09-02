@@ -16,21 +16,30 @@
         "light-gray",
         "very-light-gray"
       ],
-      "default": "light-gray"
+      "default": "gray"
     },
-    "blockImageHeight": {
-      "type": "boolean",
-      "default": false
-    },
-    "images": {
+    "bgImage": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": true,
-      "allowedTypes": ["images", "files", "videos", "audios"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "a"
+      ],
       "default": "h2"
     },
     "header": {
@@ -48,27 +57,7 @@
         "light-gray",
         "very-light-gray"
       ],
-      "default": "green"
-    },
-    "paragraph1": {
-      "type": "text",
-      "default": "Tu będzie akapit lub dwa tekstu, ilustrowane nieobowiązkowymI, kwadratowymi obrazkami (slideshow). Jeśli nie ma obrazka, zostaje kolor tła. Kontrolki włączają się na hover, podpis (jeśli jest) jest widoczny cały czas. ",
-      "required": true
-    },
-    "paragraph2": {
-      "type": "text"
-    },
-    "paragraphColor": {
-      "type": "enumeration",
-      "enum": [
-        "white",
-        "green",
-        "black",
-        "gray",
-        "light-gray",
-        "very-light-gray"
-      ],
-      "default": "black"
+      "default": "white"
     },
     "linkColor": {
       "type": "enumeration",
@@ -80,7 +69,7 @@
         "light-gray",
         "very-light-gray"
       ],
-      "default": "green"
+      "default": "white"
     },
     "linkUrl1": {
       "type": "string"
@@ -93,6 +82,13 @@
       "type": "string"
     },
     "linkText2": {
+      "type": "string"
+    },
+    "bgMask": {
+      "type": "boolean",
+      "default": false
+    },
+    "headerHref": {
       "type": "string"
     }
   }

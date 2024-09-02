@@ -24,7 +24,7 @@ export interface SectionsBlock1 extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'light-gray'>;
-    blockImageHeight: Attribute.Boolean & Attribute.DefaultTo<false>;
+    blockImageHeight: Attribute.Boolean & Attribute.DefaultTo<true>;
     images: Attribute.Media & Attribute.Required;
     headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
       Attribute.DefaultTo<'h2'>;
@@ -66,7 +66,6 @@ export interface SectionsBlock2 extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'light-gray'>;
-    blockImageHeight: Attribute.Boolean & Attribute.DefaultTo<false>;
     images: Attribute.Media & Attribute.Required;
     headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
       Attribute.DefaultTo<'h2'>;
@@ -107,9 +106,8 @@ export interface SectionsBlock3 extends Schema.Component {
     bg: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'light-gray'>;
-    blockImageHeight: Attribute.Boolean & Attribute.DefaultTo<false>;
-    images: Attribute.Media & Attribute.Required;
+      Attribute.DefaultTo<'gray'>;
+    bgImage: Attribute.Media & Attribute.Required;
     headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
       Attribute.DefaultTo<'h2'>;
     header: Attribute.String &
@@ -118,7 +116,7 @@ export interface SectionsBlock3 extends Schema.Component {
     headerColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'green'>;
+      Attribute.DefaultTo<'white'>;
     paragraph1: Attribute.Text &
       Attribute.Required &
       Attribute.DefaultTo<'Tu b\u0119dzie akapit lub dwa tekstu, ilustrowane nieobowi\u0105zkowymI, kwadratowymi obrazkami (slideshow). Je\u015Bli nie ma obrazka, zostaje kolor t\u0142a. Kontrolki w\u0142\u0105czaj\u0105 si\u0119 na hover, podpis (je\u015Bli jest) jest widoczny ca\u0142y czas. '>;
@@ -126,16 +124,17 @@ export interface SectionsBlock3 extends Schema.Component {
     paragraphColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'black'>;
+      Attribute.DefaultTo<'white'>;
     linkColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'green'>;
+      Attribute.DefaultTo<'white'>;
     linkUrl1: Attribute.String;
     linkText1: Attribute.String &
       Attribute.DefaultTo<'Zobacz inne produkty \u2192'>;
     linkUrl2: Attribute.String;
     linkText2: Attribute.String;
+    bgMask: Attribute.Boolean & Attribute.DefaultTo<false>;
   };
 }
 
@@ -149,10 +148,9 @@ export interface SectionsBlock4 extends Schema.Component {
     bg: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'light-gray'>;
-    blockImageHeight: Attribute.Boolean & Attribute.DefaultTo<false>;
-    images: Attribute.Media & Attribute.Required;
-    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
+      Attribute.DefaultTo<'gray'>;
+    bgImage: Attribute.Media & Attribute.Required;
+    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'a']> &
       Attribute.DefaultTo<'h2'>;
     header: Attribute.String &
       Attribute.Required &
@@ -160,24 +158,18 @@ export interface SectionsBlock4 extends Schema.Component {
     headerColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'green'>;
-    paragraph1: Attribute.Text &
-      Attribute.Required &
-      Attribute.DefaultTo<'Tu b\u0119dzie akapit lub dwa tekstu, ilustrowane nieobowi\u0105zkowymI, kwadratowymi obrazkami (slideshow). Je\u015Bli nie ma obrazka, zostaje kolor t\u0142a. Kontrolki w\u0142\u0105czaj\u0105 si\u0119 na hover, podpis (je\u015Bli jest) jest widoczny ca\u0142y czas. '>;
-    paragraph2: Attribute.Text;
-    paragraphColor: Attribute.Enumeration<
-      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
-    > &
-      Attribute.DefaultTo<'black'>;
+      Attribute.DefaultTo<'white'>;
     linkColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'green'>;
+      Attribute.DefaultTo<'white'>;
     linkUrl1: Attribute.String;
     linkText1: Attribute.String &
       Attribute.DefaultTo<'Zobacz inne produkty \u2192'>;
     linkUrl2: Attribute.String;
     linkText2: Attribute.String;
+    bgMask: Attribute.Boolean & Attribute.DefaultTo<false>;
+    headerHref: Attribute.String;
   };
 }
 
@@ -203,11 +195,7 @@ export interface SectionsBlock5 extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'green'>;
-    paragraph1: Attribute.Text &
-      Attribute.Required &
-      Attribute.DefaultTo<'Tu b\u0119dzie akapit lub dwa tekstu, ilustrowane nieobowi\u0105zkowymI, kwadratowymi obrazkami (slideshow). Je\u015Bli nie ma obrazka, zostaje kolor t\u0142a. Kontrolki w\u0142\u0105czaj\u0105 si\u0119 na hover, podpis (je\u015Bli jest) jest widoczny ca\u0142y czas. '>;
-    paragraph2: Attribute.Text;
-    paragraphColor: Attribute.Enumeration<
+    paragraphLinkColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'black'>;
@@ -220,7 +208,8 @@ export interface SectionsBlock5 extends Schema.Component {
       Attribute.DefaultTo<'Zobacz inne produkty \u2192'>;
     linkUrl2: Attribute.String;
     linkText2: Attribute.String;
-    paragraphLinks: Attribute.Component<'other.paragraph-links', true>;
+    paragraphLinks: Attribute.Component<'other.paragraph-links', true> &
+      Attribute.Required;
   };
 }
 
@@ -234,9 +223,9 @@ export interface SectionsBlock6 extends Schema.Component {
     bg: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'light-gray'>;
-    blockImageHeight: Attribute.Boolean & Attribute.DefaultTo<false>;
-    images: Attribute.Media & Attribute.Required;
+      Attribute.DefaultTo<'gray'>;
+    bgImage: Attribute.Media & Attribute.Required;
+    bgMask: Attribute.Boolean & Attribute.DefaultTo<false>;
     headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
       Attribute.DefaultTo<'h2'>;
     header: Attribute.String &
@@ -245,25 +234,22 @@ export interface SectionsBlock6 extends Schema.Component {
     headerColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'green'>;
-    paragraph1: Attribute.Text &
-      Attribute.Required &
-      Attribute.DefaultTo<'Tu b\u0119dzie akapit lub dwa tekstu, ilustrowane nieobowi\u0105zkowymI, kwadratowymi obrazkami (slideshow). Je\u015Bli nie ma obrazka, zostaje kolor t\u0142a. Kontrolki w\u0142\u0105czaj\u0105 si\u0119 na hover, podpis (je\u015Bli jest) jest widoczny ca\u0142y czas. '>;
-    paragraph2: Attribute.Text;
-    paragraphColor: Attribute.Enumeration<
+      Attribute.DefaultTo<'white'>;
+    paragraphLinkColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'black'>;
+      Attribute.DefaultTo<'white'>;
     linkColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
-      Attribute.DefaultTo<'green'>;
+      Attribute.DefaultTo<'white'>;
     linkUrl1: Attribute.String;
     linkText1: Attribute.String &
       Attribute.DefaultTo<'Zobacz inne produkty \u2192'>;
     linkUrl2: Attribute.String;
     linkText2: Attribute.String;
-    paragraphLinks: Attribute.Component<'other.paragraph-links', true>;
+    paragraphLinks: Attribute.Component<'other.paragraph-links', true> &
+      Attribute.Required;
   };
 }
 
@@ -278,8 +264,6 @@ export interface SectionsBlock7 extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'light-gray'>;
-    blockImageHeight: Attribute.Boolean & Attribute.DefaultTo<false>;
-    images: Attribute.Media & Attribute.Required;
     headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
       Attribute.DefaultTo<'h2'>;
     header: Attribute.String &
@@ -306,7 +290,9 @@ export interface SectionsBlock7 extends Schema.Component {
       Attribute.DefaultTo<'Zobacz inne produkty \u2192'>;
     linkUrl2: Attribute.String;
     linkText2: Attribute.String;
-    paragraphLinks: Attribute.Component<'other.paragraph-links', true>;
+    url: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'uynCeLheCPc'>;
   };
 }
 

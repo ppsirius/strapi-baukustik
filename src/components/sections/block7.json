@@ -18,19 +18,16 @@
       ],
       "default": "light-gray"
     },
-    "blockImageHeight": {
-      "type": "boolean",
-      "default": false
-    },
-    "images": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": ["images"]
-    },
     "headerAs": {
       "type": "enumeration",
-      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
       "default": "h2"
     },
     "header": {
@@ -95,11 +92,10 @@
     "linkText2": {
       "type": "string"
     },
-    "paragraphLinks": {
-      "displayName": "paragraphLinks",
-      "type": "component",
-      "repeatable": true,
-      "component": "other.paragraph-links"
+    "url": {
+      "type": "string",
+      "required": true,
+      "default": "uynCeLheCPc"
     }
   }
 }

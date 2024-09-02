@@ -20,7 +20,7 @@
     },
     "blockImageHeight": {
       "type": "boolean",
-      "default": false
+      "default": true
     },
     "images": {
       "type": "media",
