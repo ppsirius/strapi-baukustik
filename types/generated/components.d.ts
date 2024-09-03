@@ -13,6 +13,22 @@ export interface OtherParagraphLinks extends Schema.Component {
   };
 }
 
+export interface OtherTags extends Schema.Component {
+  collectionName: 'components_other_tags';
+  info: {
+    displayName: 'tags';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Tynki Sonaspray'>;
+    value: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Sonaspray'>;
+  };
+}
+
 export interface SectionsBlock1 extends Schema.Component {
   collectionName: 'components_sections_block1s';
   info: {
@@ -527,6 +543,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'other.paragraph-links': OtherParagraphLinks;
+      'other.tags': OtherTags;
       'sections.block1': SectionsBlock1;
       'sections.block2': SectionsBlock2;
       'sections.block3': SectionsBlock3;

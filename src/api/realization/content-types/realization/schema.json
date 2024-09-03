@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "realizations",
+  "info": {
+    "singularName": "realization",
+    "pluralName": "realizations",
+    "displayName": "Realization",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "header",
+      "required": true
+    },
+    "headerAs": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "h2",
+      "required": true
+    },
+    "headerColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "white"
+    },
+    "date": {
+      "type": "string",
+      "required": true
+    },
+    "localization": {
+      "type": "string",
+      "required": true
+    },
+    "area": {
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "type": "string"
+    },
+    "authorLink": {
+      "type": "string"
+    },
+    "photoAuthor": {
+      "type": "string"
+    },
+    "photoAuthorLink": {
+      "type": "string"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "products": {
+      "type": "customField",
+      "options": [
+        "Sonaspray",
+        "Sonacoustic",
+        "Soundblox",
+        "EWES",
+        "ZIPS",
+        "GreenWall"
+      ],
+      "required": true,
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "metaDescription": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text",
+      "default": "Opis dodatkowy projektu. W tym miejscu opowiadamy architektom, jak za pomocą oferowanych przez nas produktów i usług udało się zaprojektować wnętrze, które w innym wypadku byłoby straszne akustycznie, brzydkie lub drogie. Ciekawostki lub wartościowe informacje know-how, które mogą pomóc w formowaniu kolejnej realizacji/sprzedaży podobnego typu są tu jak najbardziej na miejscu."
+    }
+  }
+}
