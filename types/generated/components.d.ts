@@ -539,6 +539,17 @@ export interface SectionsHero7 extends Schema.Component {
   };
 }
 
+export interface SectionsRealizationGrid extends Schema.Component {
+  collectionName: 'components_sections_realization_grids';
+  info: {
+    displayName: 'RealizationGrid';
+    icon: 'apps';
+  };
+  attributes: {
+    desc: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -558,6 +569,7 @@ declare module '@strapi/types' {
       'sections.hero5': SectionsHero5;
       'sections.hero6': SectionsHero6;
       'sections.hero7': SectionsHero7;
+      'sections.realization-grid': SectionsRealizationGrid;
     }
   }
 }

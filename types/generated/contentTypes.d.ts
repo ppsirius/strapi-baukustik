@@ -362,109 +362,6 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiPagePage extends Schema.CollectionType {
-  collectionName: 'pages';
-  info: {
-    singularName: 'page';
-    pluralName: 'pages';
-    displayName: 'Page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    pageName: Attribute.String & Attribute.Required & Attribute.Unique;
-    slug: Attribute.UID<'api::page.page', 'pageName'> & Attribute.Required;
-    sections: Attribute.DynamicZone<
-      [
-        'sections.hero1',
-        'sections.block1',
-        'sections.block2',
-        'sections.block3',
-        'sections.block4',
-        'sections.block5',
-        'sections.block6',
-        'sections.block7',
-        'sections.hero2',
-        'sections.hero3',
-        'sections.hero4',
-        'sections.hero5',
-        'sections.hero6',
-        'sections.hero7'
-      ]
-    >;
-    description: Attribute.String;
-    category: Attribute.String;
-    subCategory: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
-export interface ApiRealizationRealization extends Schema.CollectionType {
-  collectionName: 'realizations';
-  info: {
-    singularName: 'realization';
-    pluralName: 'realizations';
-    displayName: 'Realization';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    header: Attribute.String & Attribute.Required & Attribute.Unique;
-    slug: Attribute.UID<'api::realization.realization', 'header'> &
-      Attribute.Required;
-    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
-      Attribute.Required &
-      Attribute.DefaultTo<'h2'>;
-    headerColor: Attribute.Enumeration<
-      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
-    > &
-      Attribute.DefaultTo<'white'>;
-    date: Attribute.String & Attribute.Required;
-    localization: Attribute.String & Attribute.Required;
-    area: Attribute.String & Attribute.Required;
-    author: Attribute.String;
-    authorLink: Attribute.String;
-    photoAuthor: Attribute.String;
-    photoAuthorLink: Attribute.String;
-    coverImage: Attribute.Media & Attribute.Required;
-    images: Attribute.Media & Attribute.Required;
-    products: Attribute.JSON &
-      Attribute.Required &
-      Attribute.CustomField<
-        'plugin::multi-select.multi-select',
-        ['Sonaspray', 'Sonacoustic', 'Soundblox', 'EWES', 'ZIPS', 'GreenWall']
-      >;
-    metaDescription: Attribute.String;
-    description: Attribute.Text &
-      Attribute.DefaultTo<'Opis dodatkowy projektu. W tym miejscu opowiadamy architektom, jak za pomoc\u0105 oferowanych przez nas produkt\u00F3w i us\u0142ug uda\u0142o si\u0119 zaprojektowa\u0107 wn\u0119trze, kt\u00F3re w innym wypadku by\u0142oby straszne akustycznie, brzydkie lub drogie. Ciekawostki lub warto\u015Bciowe informacje know-how, kt\u00F3re mog\u0105 pom\u00F3c w formowaniu kolejnej realizacji/sprzeda\u017Cy podobnego typu s\u0105 tu jak najbardziej na miejscu.'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::realization.realization',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::realization.realization',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -891,6 +788,110 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiPagePage extends Schema.CollectionType {
+  collectionName: 'pages';
+  info: {
+    singularName: 'page';
+    pluralName: 'pages';
+    displayName: 'Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    pageName: Attribute.String & Attribute.Required & Attribute.Unique;
+    slug: Attribute.UID<'api::page.page', 'pageName'> & Attribute.Required;
+    sections: Attribute.DynamicZone<
+      [
+        'sections.block1',
+        'sections.block2',
+        'sections.block3',
+        'sections.block4',
+        'sections.block5',
+        'sections.block6',
+        'sections.block7',
+        'sections.hero1',
+        'sections.hero2',
+        'sections.hero3',
+        'sections.hero4',
+        'sections.hero5',
+        'sections.hero6',
+        'sections.hero7',
+        'sections.realization-grid'
+      ]
+    >;
+    description: Attribute.String;
+    category: Attribute.String;
+    subCategory: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRealizationRealization extends Schema.CollectionType {
+  collectionName: 'realizations';
+  info: {
+    singularName: 'realization';
+    pluralName: 'realizations';
+    displayName: 'Realization';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    header: Attribute.String & Attribute.Required & Attribute.Unique;
+    slug: Attribute.UID<'api::realization.realization', 'header'> &
+      Attribute.Required;
+    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
+      Attribute.Required &
+      Attribute.DefaultTo<'h2'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    date: Attribute.String & Attribute.Required;
+    localization: Attribute.String & Attribute.Required;
+    area: Attribute.String & Attribute.Required;
+    author: Attribute.String;
+    authorLink: Attribute.String;
+    photoAuthor: Attribute.String;
+    photoAuthorLink: Attribute.String;
+    coverImage: Attribute.Media & Attribute.Required;
+    images: Attribute.Media & Attribute.Required;
+    products: Attribute.JSON &
+      Attribute.Required &
+      Attribute.CustomField<
+        'plugin::multi-select.multi-select',
+        ['Sonaspray', 'Sonacoustic', 'Soundblox', 'EWES', 'ZIPS', 'GreenWall']
+      >;
+    metaDescription: Attribute.String;
+    description: Attribute.Text &
+      Attribute.DefaultTo<'Opis dodatkowy projektu. W tym miejscu opowiadamy architektom, jak za pomoc\u0105 oferowanych przez nas produkt\u00F3w i us\u0142ug uda\u0142o si\u0119 zaprojektowa\u0107 wn\u0119trze, kt\u00F3re w innym wypadku by\u0142oby straszne akustycznie, brzydkie lub drogie. Ciekawostki lub warto\u015Bciowe informacje know-how, kt\u00F3re mog\u0105 pom\u00F3c w formowaniu kolejnej realizacji/sprzeda\u017Cy podobnego typu s\u0105 tu jak najbardziej na miejscu.'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::realization.realization',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::realization.realization',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -901,8 +902,6 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
-      'api::page.page': ApiPagePage;
-      'api::realization.realization': ApiRealizationRealization;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -911,6 +910,8 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::page.page': ApiPagePage;
+      'api::realization.realization': ApiRealizationRealization;
     }
   }
 }

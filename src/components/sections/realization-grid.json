@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_sections_realization_grids",
+  "info": {
+    "displayName": "RealizationGrid",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "desc": {
+      "type": "string"
+    }
+  }
+}
