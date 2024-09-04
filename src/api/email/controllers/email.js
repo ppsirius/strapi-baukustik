@@ -2,6 +2,24 @@
 
 const { SESClient, SendEmailCommand } = require("@aws-sdk/client-ses");
 
+const createEmailBody = (
+  formName,
+  formCompany,
+  formPhone,
+  formEmail,
+  formMessage
+) => `
+New Contact Form Submission
+
+Name: ${formName}
+Company: ${formCompany}
+Phone: ${formPhone}
+Email: ${formEmail}
+
+Message:
+${formMessage}
+`;
+
 const sesClient = new SESClient({
   region: process.env.AWS_REGION,
   credentials: {
@@ -12,10 +30,20 @@ const sesClient = new SESClient({
 
 module.exports = {
   async send(ctx) {
-    const { text } = ctx.request.body;
-    console.log(ctx.request.body);
+    console.log("Params:", ctx.request.body);
+    const { formName, formCompany, formPhone, formEmail, formMessage } =
+      ctx.request.body;
+
     const to = "ppsirius@gmail.com";
     const from = "Contact form <ppsirius@gmail.com>";
+
+    const emailBody = createEmailBody(
+      formName,
+      formCompany,
+      formPhone,
+      formEmail,
+      formMessage
+    );
 
     const params = {
       Source: from,
@@ -28,7 +56,10 @@ module.exports = {
         },
         Body: {
           Text: {
-            Data: text,
+            Data: emailBody,
+          },
+          Html: {
+            Data: `<html><body><pre>${emailBody}</pre></body></html>`, // Simple HTML version
           },
         },
       },
