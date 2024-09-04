@@ -874,6 +874,9 @@ export interface ApiRealizationRealization extends Schema.CollectionType {
     metaDescription: Attribute.String;
     description: Attribute.Text &
       Attribute.DefaultTo<'Opis dodatkowy projektu. W tym miejscu opowiadamy architektom, jak za pomoc\u0105 oferowanych przez nas produkt\u00F3w i us\u0142ug uda\u0142o si\u0119 zaprojektowa\u0107 wn\u0119trze, kt\u00F3re w innym wypadku by\u0142oby straszne akustycznie, brzydkie lub drogie. Ciekawostki lub warto\u015Bciowe informacje know-how, kt\u00F3re mog\u0105 pom\u00F3c w formowaniu kolejnej realizacji/sprzeda\u017Cy podobnego typu s\u0105 tu jak najbardziej na miejscu.'>;
+    navigationHeader: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Zobacz wszystkie realizacje \u2192'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

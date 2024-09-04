@@ -106,6 +106,11 @@
     "description": {
       "type": "text",
       "default": "Opis dodatkowy projektu. W tym miejscu opowiadamy architektom, jak za pomocą oferowanych przez nas produktów i usług udało się zaprojektować wnętrze, które w innym wypadku byłoby straszne akustycznie, brzydkie lub drogie. Ciekawostki lub wartościowe informacje know-how, które mogą pomóc w formowaniu kolejnej realizacji/sprzedaży podobnego typu są tu jak najbardziej na miejscu."
+    },
+    "navigationHeader": {
+      "type": "string",
+      "default": "Zobacz wszystkie realizacje →",
+      "required": true
     }
   }
 }

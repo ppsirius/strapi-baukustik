@@ -90,6 +90,18 @@
     },
     "headerHref": {
       "type": "string"
+    },
+    "headerHoverColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
     }
   }
 }

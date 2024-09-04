@@ -186,6 +186,10 @@ export interface SectionsBlock4 extends Schema.Component {
     linkText2: Attribute.String;
     bgMask: Attribute.Boolean & Attribute.DefaultTo<false>;
     headerHref: Attribute.String;
+    headerHoverColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
   };
 }
 
