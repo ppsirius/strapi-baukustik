@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_other_products",
+  "info": {
+    "displayName": "products",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "Typ A →",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "default": "Opis"
+    },
+    "link": {
+      "type": "string",
+      "default": "#"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "weight": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    }
+  }
+}

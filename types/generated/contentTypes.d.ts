@@ -818,7 +818,11 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.hero5',
         'sections.hero6',
         'sections.hero7',
-        'sections.realization-grid'
+        'sections.realization-grid',
+        'sections.product1',
+        'sections.product2',
+        'sections.product3',
+        'sections.product4'
       ]
     >;
     description: Attribute.String;

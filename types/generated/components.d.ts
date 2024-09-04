@@ -13,6 +13,24 @@ export interface OtherParagraphLinks extends Schema.Component {
   };
 }
 
+export interface OtherProducts extends Schema.Component {
+  collectionName: 'components_other_products';
+  info: {
+    displayName: 'products';
+    description: '';
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Typ A \u2192'>;
+    description: Attribute.String & Attribute.DefaultTo<'Opis'>;
+    link: Attribute.String & Attribute.DefaultTo<'#'>;
+    images: Attribute.Media & Attribute.Required;
+    weight: Attribute.String;
+    size: Attribute.String;
+  };
+}
+
 export interface OtherTags extends Schema.Component {
   collectionName: 'components_other_tags';
   info: {
@@ -543,6 +561,122 @@ export interface SectionsHero7 extends Schema.Component {
   };
 }
 
+export interface SectionsProduct1 extends Schema.Component {
+  collectionName: 'components_sections_product1s';
+  info: {
+    displayName: 'Product1';
+    icon: 'archive';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String & Attribute.Required & Attribute.DefaultTo<'Name'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'very-light-gray'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    linkText1: Attribute.String;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText2: Attribute.String;
+    linkUrl2: Attribute.String;
+    products: Attribute.Component<'other.products', true> & Attribute.Required;
+  };
+}
+
+export interface SectionsProduct2 extends Schema.Component {
+  collectionName: 'components_sections_product2s';
+  info: {
+    displayName: 'Product2';
+    icon: 'archive';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String & Attribute.Required & Attribute.DefaultTo<'Name'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'very-light-gray'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    linkText1: Attribute.String;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText2: Attribute.String;
+    linkUrl2: Attribute.String;
+    products: Attribute.Component<'other.products', true> & Attribute.Required;
+  };
+}
+
+export interface SectionsProduct3 extends Schema.Component {
+  collectionName: 'components_sections_product3s';
+  info: {
+    displayName: 'Product3';
+    icon: 'archive';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String & Attribute.Required & Attribute.DefaultTo<'Name'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'very-light-gray'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    linkText1: Attribute.String;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText2: Attribute.String;
+    linkUrl2: Attribute.String;
+    products: Attribute.Component<'other.products', true> & Attribute.Required;
+  };
+}
+
+export interface SectionsProduct4 extends Schema.Component {
+  collectionName: 'components_sections_product4s';
+  info: {
+    displayName: 'Product4';
+    icon: 'archive';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String & Attribute.Required & Attribute.DefaultTo<'Name'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'very-light-gray'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    linkText1: Attribute.String;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText2: Attribute.String;
+    linkUrl2: Attribute.String;
+    products: Attribute.Component<'other.products', true> & Attribute.Required;
+  };
+}
+
 export interface SectionsRealizationGrid extends Schema.Component {
   collectionName: 'components_sections_realization_grids';
   info: {
@@ -558,6 +692,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'other.paragraph-links': OtherParagraphLinks;
+      'other.products': OtherProducts;
       'other.tags': OtherTags;
       'sections.block1': SectionsBlock1;
       'sections.block2': SectionsBlock2;
@@ -573,6 +708,10 @@ declare module '@strapi/types' {
       'sections.hero5': SectionsHero5;
       'sections.hero6': SectionsHero6;
       'sections.hero7': SectionsHero7;
+      'sections.product1': SectionsProduct1;
+      'sections.product2': SectionsProduct2;
+      'sections.product3': SectionsProduct3;
+      'sections.product4': SectionsProduct4;
       'sections.realization-grid': SectionsRealizationGrid;
     }
   }
