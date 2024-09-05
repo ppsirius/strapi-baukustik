@@ -1,0 +1,112 @@
+{
+  "collectionName": "components_sections_files",
+  "info": {
+    "displayName": "Files",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "default": "Materiały do pobrania"
+    },
+    "headerColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
+    },
+    "bg": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "light-gray"
+    },
+    "filesColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "black"
+    },
+    "filesHoverColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
+    },
+    "files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "paragraph1": {
+      "type": "text"
+    },
+    "paragraphColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "black"
+    },
+    "linkColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
+    },
+    "linkText1": {
+      "type": "string",
+      "default": "Link do powiązanego zagadnienia →"
+    },
+    "linkUrl1": {
+      "type": "string",
+      "default": "#"
+    },
+    "linkText2": {
+      "type": "string"
+    },
+    "linkUrl2": {
+      "type": "string"
+    }
+  }
+}

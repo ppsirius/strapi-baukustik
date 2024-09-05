@@ -13,6 +13,21 @@ export interface OtherParagraphLinks extends Schema.Component {
   };
 }
 
+export interface OtherPersons extends Schema.Component {
+  collectionName: 'components_other_persons';
+  info: {
+    displayName: 'Persons';
+    description: '';
+  };
+  attributes: {
+    avatar: Attribute.Media & Attribute.Required;
+    name: Attribute.String & Attribute.DefaultTo<'Homer Jay Simpson'>;
+    position: Attribute.String & Attribute.DefaultTo<'PREZES ZARZ\u0104DU'>;
+    email: Attribute.String & Attribute.DefaultTo<'@baukustik.com'>;
+    phone: Attribute.String & Attribute.DefaultTo<'+48 777 777 777'>;
+  };
+}
+
 export interface OtherProducts extends Schema.Component {
   collectionName: 'components_other_products';
   info: {
@@ -334,6 +349,50 @@ export interface SectionsBlock7 extends Schema.Component {
   };
 }
 
+export interface SectionsFiles extends Schema.Component {
+  collectionName: 'components_sections_files';
+  info: {
+    displayName: 'Files';
+    icon: 'file';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String &
+      Attribute.DefaultTo<'Materia\u0142y do pobrania'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'light-gray'>;
+    filesColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
+    filesHoverColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    files: Attribute.Media;
+    paragraph1: Attribute.Text;
+    paragraphColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    linkText1: Attribute.String &
+      Attribute.DefaultTo<'Link do powi\u0105zanego zagadnienia \u2192'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText2: Attribute.String;
+    linkUrl2: Attribute.String;
+  };
+}
+
 export interface SectionsHero1 extends Schema.Component {
   collectionName: 'components_sections_hero1s';
   info: {
@@ -561,6 +620,45 @@ export interface SectionsHero7 extends Schema.Component {
   };
 }
 
+export interface SectionsPartnersGrid extends Schema.Component {
+  collectionName: 'components_sections_partners_grids';
+  info: {
+    displayName: 'PartnersGrid';
+    icon: 'dashboard';
+    description: '';
+  };
+  attributes: {
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    header: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Nasi partnerzy'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    paragraph1: Attribute.String &
+      Attribute.DefaultTo<'Tu b\u0119dzie akapit tekstu, ilustrowany logami partner\u00F3w i firm wsp\u00F3\u0142pracuj\u0105cych.'>;
+    paragraph2: Attribute.String;
+    paragraphColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
+    linkText1: Attribute.String &
+      Attribute.DefaultTo<'Link do powi\u0105zanego zagadnienia \u2192'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText2: Attribute.String;
+    linkUrl2: Attribute.String;
+    partnersLogo: Attribute.Media & Attribute.Required;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+  };
+}
+
 export interface SectionsProduct1 extends Schema.Component {
   collectionName: 'components_sections_product1s';
   info: {
@@ -688,10 +786,41 @@ export interface SectionsRealizationGrid extends Schema.Component {
   };
 }
 
+export interface SectionsTeam extends Schema.Component {
+  collectionName: 'components_sections_teams';
+  info: {
+    displayName: 'Team';
+    icon: 'user';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String &
+      Attribute.DefaultTo<'Zesp\u00F3\u0142 Baukustik'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'very-light-gray'>;
+    personColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
+    personContactColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    persons: Attribute.Component<'other.persons', true>;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'other.paragraph-links': OtherParagraphLinks;
+      'other.persons': OtherPersons;
       'other.products': OtherProducts;
       'other.tags': OtherTags;
       'sections.block1': SectionsBlock1;
@@ -701,6 +830,7 @@ declare module '@strapi/types' {
       'sections.block5': SectionsBlock5;
       'sections.block6': SectionsBlock6;
       'sections.block7': SectionsBlock7;
+      'sections.files': SectionsFiles;
       'sections.hero1': SectionsHero1;
       'sections.hero2': SectionsHero2;
       'sections.hero3': SectionsHero3;
@@ -708,11 +838,13 @@ declare module '@strapi/types' {
       'sections.hero5': SectionsHero5;
       'sections.hero6': SectionsHero6;
       'sections.hero7': SectionsHero7;
+      'sections.partners-grid': SectionsPartnersGrid;
       'sections.product1': SectionsProduct1;
       'sections.product2': SectionsProduct2;
       'sections.product3': SectionsProduct3;
       'sections.product4': SectionsProduct4;
       'sections.realization-grid': SectionsRealizationGrid;
+      'sections.team': SectionsTeam;
     }
   }
 }

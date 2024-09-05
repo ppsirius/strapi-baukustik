@@ -822,7 +822,10 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.product1',
         'sections.product2',
         'sections.product3',
-        'sections.product4'
+        'sections.product4',
+        'sections.partners-grid',
+        'sections.files',
+        'sections.team'
       ]
     >;
     description: Attribute.String;

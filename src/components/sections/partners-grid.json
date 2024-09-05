@@ -1,0 +1,93 @@
+{
+  "collectionName": "components_sections_partners_grids",
+  "info": {
+    "displayName": "PartnersGrid",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "white"
+    },
+    "header": {
+      "type": "string",
+      "required": true,
+      "default": "Nasi partnerzy"
+    },
+    "headerColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
+    },
+    "paragraph1": {
+      "type": "string",
+      "default": "Tu będzie akapit tekstu, ilustrowany logami partnerów i firm współpracujących."
+    },
+    "paragraph2": {
+      "type": "string"
+    },
+    "paragraphColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "black"
+    },
+    "linkText1": {
+      "type": "string",
+      "default": "Link do powiązanego zagadnienia →"
+    },
+    "linkUrl1": {
+      "type": "string",
+      "default": "#"
+    },
+    "linkText2": {
+      "type": "string"
+    },
+    "linkUrl2": {
+      "type": "string"
+    },
+    "partnersLogo": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "linkColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
+    }
+  }
+}
