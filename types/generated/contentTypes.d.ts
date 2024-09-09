@@ -1036,7 +1036,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.product4',
         'sections.partners-grid',
         'sections.files',
-        'sections.team'
+        'sections.team',
+        'sections.contact-person'
       ]
     >;
     description: Attribute.String;

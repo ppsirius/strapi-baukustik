@@ -47,7 +47,8 @@
         "sections.product4",
         "sections.partners-grid",
         "sections.files",
-        "sections.team"
+        "sections.team",
+        "sections.contact-person"
       ],
       "pluginOptions": {}
     },

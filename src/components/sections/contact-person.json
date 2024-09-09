@@ -1,0 +1,102 @@
+{
+  "collectionName": "components_sections_contact_people",
+  "info": {
+    "displayName": "ContactPerson",
+    "icon": "phone"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string"
+    },
+    "headerAs": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "h5"
+    },
+    "headerColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "white"
+    },
+    "paragraph1": {
+      "type": "text",
+      "default": "Masz pytania? Nie wiesz, jaki produkt dobrać? Potrzebujesz poprawić akustykę swojego projektu?"
+    },
+    "paragraphColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "white"
+    },
+    "linkColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "white"
+    },
+    "linkText1": {
+      "type": "string",
+      "default": "Skontaktuj się z nami →"
+    },
+    "linkUrl1": {
+      "type": "string",
+      "required": false,
+      "default": "/kontakt"
+    },
+    "header2": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "default": "Katarzyna Szymerska"
+    },
+    "position": {
+      "type": "string",
+      "default": "SPECJALISTA DS. OBSŁUGI KLIENTA"
+    },
+    "email": {
+      "type": "string",
+      "regex": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+      "default": "info@baukustik.com"
+    },
+    "phone": {
+      "type": "string",
+      "default": "+48 777 777 777"
+    }
+  }
+}

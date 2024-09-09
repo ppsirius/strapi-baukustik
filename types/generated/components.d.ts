@@ -349,6 +349,43 @@ export interface SectionsBlock7 extends Schema.Component {
   };
 }
 
+export interface SectionsContactPerson extends Schema.Component {
+  collectionName: 'components_sections_contact_people';
+  info: {
+    displayName: 'ContactPerson';
+    icon: 'phone';
+  };
+  attributes: {
+    header: Attribute.String;
+    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
+      Attribute.DefaultTo<'h5'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    paragraph1: Attribute.Text &
+      Attribute.DefaultTo<'Masz pytania? Nie wiesz, jaki produkt dobra\u0107? Potrzebujesz poprawi\u0107 akustyk\u0119 swojego projektu?'>;
+    paragraphColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    linkText1: Attribute.String &
+      Attribute.DefaultTo<'Skontaktuj si\u0119 z nami \u2192'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'/kontakt'>;
+    header2: Attribute.String;
+    image: Attribute.Media & Attribute.Required;
+    name: Attribute.String & Attribute.DefaultTo<'Katarzyna Szymerska'>;
+    position: Attribute.String &
+      Attribute.DefaultTo<'SPECJALISTA DS. OBS\u0141UGI KLIENTA'>;
+    email: Attribute.String & Attribute.DefaultTo<'info@baukustik.com'>;
+    phone: Attribute.String & Attribute.DefaultTo<'+48 777 777 777'>;
+  };
+}
+
 export interface SectionsFiles extends Schema.Component {
   collectionName: 'components_sections_files';
   info: {
@@ -830,6 +867,7 @@ declare module '@strapi/types' {
       'sections.block5': SectionsBlock5;
       'sections.block6': SectionsBlock6;
       'sections.block7': SectionsBlock7;
+      'sections.contact-person': SectionsContactPerson;
       'sections.files': SectionsFiles;
       'sections.hero1': SectionsHero1;
       'sections.hero2': SectionsHero2;
