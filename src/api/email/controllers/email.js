@@ -34,8 +34,8 @@ module.exports = {
     const { formName, formCompany, formPhone, formEmail, formMessage } =
       ctx.request.body;
 
-    const to = "ppsirius@gmail.com";
-    const from = "Contact form <ppsirius@gmail.com>";
+    const to = "info@baukustik.com";
+    const from = "Contact form <info@baukustik.com>";
 
     const emailBody = createEmailBody(
       formName,
