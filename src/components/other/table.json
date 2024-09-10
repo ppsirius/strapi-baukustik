@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_other_tables",
+  "info": {
+    "displayName": "Table",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Nazwa parametru"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "data": {
+      "type": "string",
+      "default": "Wartość"
+    }
+  }
+}

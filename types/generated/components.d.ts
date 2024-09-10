@@ -46,6 +46,22 @@ export interface OtherProducts extends Schema.Component {
   };
 }
 
+export interface OtherTable extends Schema.Component {
+  collectionName: 'components_other_tables';
+  info: {
+    displayName: 'Table';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Nazwa parametru'>;
+    images: Attribute.Media;
+    data: Attribute.String & Attribute.DefaultTo<'Warto\u015B\u0107'>;
+  };
+}
+
 export interface OtherTags extends Schema.Component {
   collectionName: 'components_other_tags';
   info: {
@@ -696,6 +712,39 @@ export interface SectionsPartnersGrid extends Schema.Component {
   };
 }
 
+export interface SectionsProductData extends Schema.Component {
+  collectionName: 'components_sections_product_data';
+  info: {
+    displayName: 'ProductData';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String & Attribute.DefaultTo<'Dane techniczne'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
+    tableColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    images: Attribute.Media;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    linkText1: Attribute.String &
+      Attribute.DefaultTo<'Link do powi\u0105zanego zagadnienia \u2192 '>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    table: Attribute.Component<'other.table', true>;
+  };
+}
+
 export interface SectionsProduct1 extends Schema.Component {
   collectionName: 'components_sections_product1s';
   info: {
@@ -859,6 +908,7 @@ declare module '@strapi/types' {
       'other.paragraph-links': OtherParagraphLinks;
       'other.persons': OtherPersons;
       'other.products': OtherProducts;
+      'other.table': OtherTable;
       'other.tags': OtherTags;
       'sections.block1': SectionsBlock1;
       'sections.block2': SectionsBlock2;
@@ -877,6 +927,7 @@ declare module '@strapi/types' {
       'sections.hero6': SectionsHero6;
       'sections.hero7': SectionsHero7;
       'sections.partners-grid': SectionsPartnersGrid;
+      'sections.product-data': SectionsProductData;
       'sections.product1': SectionsProduct1;
       'sections.product2': SectionsProduct2;
       'sections.product3': SectionsProduct3;

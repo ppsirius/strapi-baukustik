@@ -48,7 +48,8 @@
         "sections.partners-grid",
         "sections.files",
         "sections.team",
-        "sections.contact-person"
+        "sections.contact-person",
+        "sections.product-data"
       ],
       "pluginOptions": {}
     },
