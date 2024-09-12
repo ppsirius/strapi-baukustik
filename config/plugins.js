@@ -34,7 +34,7 @@ module.exports = ({ env }) => ({
   backup: {
     enabled: true,
     config: {
-      cronSchedule: "15,30,45,0 12,13 * * *", // Runs at 14:15, 14:30, 14:45, 15:00, 15:15 Poland time
+      cronSchedule: "0 6 * * *", // At 6 AM
       storageService: "aws-s3",
       awsAccessKeyId: env("AWS_ACCESS_KEY_ID"),
       awsSecretAccessKey: env("AWS_ACCESS_SECRET"),
