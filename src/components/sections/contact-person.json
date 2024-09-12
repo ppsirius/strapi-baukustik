@@ -2,12 +2,14 @@
   "collectionName": "components_sections_contact_people",
   "info": {
     "displayName": "ContactPerson",
-    "icon": "phone"
+    "icon": "phone",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "header": {
-      "type": "string"
+      "type": "string",
+      "default": "Potrzebujesz naszego fachowego wsparcia?"
     },
     "headerAs": {
       "type": "enumeration",
@@ -74,12 +76,12 @@
       "type": "string"
     },
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "name": {
       "type": "string",

@@ -370,9 +370,11 @@ export interface SectionsContactPerson extends Schema.Component {
   info: {
     displayName: 'ContactPerson';
     icon: 'phone';
+    description: '';
   };
   attributes: {
-    header: Attribute.String;
+    header: Attribute.String &
+      Attribute.DefaultTo<'Potrzebujesz naszego fachowego wsparcia?'>;
     headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
       Attribute.DefaultTo<'h5'>;
     headerColor: Attribute.Enumeration<

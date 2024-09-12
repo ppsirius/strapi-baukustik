@@ -31,4 +31,24 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  backup: {
+    enabled: true,
+    config: {
+      cronSchedule: "15,30,45,0 12,13 * * *", // Runs at 14:15, 14:30, 14:45, 15:00, 15:15 Poland time
+      storageService: "aws-s3",
+      awsAccessKeyId: env("AWS_ACCESS_KEY_ID"),
+      awsSecretAccessKey: env("AWS_ACCESS_SECRET"),
+      awsRegion: env("AWS_REGION"),
+      awsS3Bucket: "baukustik-strapi-backup-database",
+      databaseDriver: "postgres",
+      databaseUrl: env("DATABASE_URL"),
+      pgDumpExecutable: env("PG_DUMP_EXECUTABLE", "pg_dump"), // Use default if not defined
+      allowCleanup: true,
+      timeToKeepBackupsInSeconds: 172800, // 2 days
+      cleanupCronSchedule: "0 7 * * *", // Each day at 07:00 AM
+      errorHandler: (error, strapi) => {
+        console.log(error);
+      },
+    },
+  },
 });
