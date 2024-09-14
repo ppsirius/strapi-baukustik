@@ -1038,7 +1038,8 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.files',
         'sections.team',
         'sections.contact-person',
-        'sections.product-data'
+        'sections.product-data',
+        'sections.acoustic-parameter'
       ]
     >;
     description: Attribute.String;

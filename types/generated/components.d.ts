@@ -78,6 +78,37 @@ export interface OtherTags extends Schema.Component {
   };
 }
 
+export interface SectionsAcousticParameter extends Schema.Component {
+  collectionName: 'components_other_acoustic_parameters';
+  info: {
+    displayName: 'AcousticParameter';
+    icon: 'volumeUp';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String & Attribute.DefaultTo<'Parametry akustyczne'>;
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
+      Attribute.DefaultTo<'h3'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    images: Attribute.Media;
+    paramTable: Attribute.JSON & Attribute.Required;
+    linkText1: Attribute.String &
+      Attribute.DefaultTo<'Link do powi\u0105zanego zagadnienia \u2192'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+  };
+}
+
 export interface SectionsBlock1 extends Schema.Component {
   collectionName: 'components_sections_block1s';
   info: {
@@ -912,6 +943,7 @@ declare module '@strapi/types' {
       'other.products': OtherProducts;
       'other.table': OtherTable;
       'other.tags': OtherTags;
+      'sections.acoustic-parameter': SectionsAcousticParameter;
       'sections.block1': SectionsBlock1;
       'sections.block2': SectionsBlock2;
       'sections.block3': SectionsBlock3;
