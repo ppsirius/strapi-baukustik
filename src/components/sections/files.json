@@ -68,7 +68,8 @@
       ]
     },
     "paragraph1": {
-      "type": "text"
+      "type": "text",
+      "default": "Potrzebujesz innych danych, potrzebnych do Twojego projektu lub spersonalizowanego produktu?"
     },
     "paragraphColor": {
       "type": "enumeration",
@@ -96,11 +97,11 @@
     },
     "linkText1": {
       "type": "string",
-      "default": "Link do powiązanego zagadnienia →"
+      "default": "Skontaktuj się z nami →"
     },
     "linkUrl1": {
       "type": "string",
-      "default": "#"
+      "default": "/kontakt"
     },
     "linkText2": {
       "type": "string"

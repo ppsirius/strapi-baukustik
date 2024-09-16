@@ -462,7 +462,8 @@ export interface SectionsFiles extends Schema.Component {
     > &
       Attribute.DefaultTo<'green'>;
     files: Attribute.Media;
-    paragraph1: Attribute.Text;
+    paragraph1: Attribute.Text &
+      Attribute.DefaultTo<'Potrzebujesz innych danych, potrzebnych do Twojego projektu lub spersonalizowanego produktu?'>;
     paragraphColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
@@ -472,8 +473,8 @@ export interface SectionsFiles extends Schema.Component {
     > &
       Attribute.DefaultTo<'green'>;
     linkText1: Attribute.String &
-      Attribute.DefaultTo<'Link do powi\u0105zanego zagadnienia \u2192'>;
-    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+      Attribute.DefaultTo<'Skontaktuj si\u0119 z nami \u2192'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'/kontakt'>;
     linkText2: Attribute.String;
     linkUrl2: Attribute.String;
   };
