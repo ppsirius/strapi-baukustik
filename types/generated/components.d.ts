@@ -38,7 +38,7 @@ export interface OtherProducts extends Schema.Component {
     name: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Typ A \u2192'>;
-    description: Attribute.String & Attribute.DefaultTo<'Opis'>;
+    description: Attribute.Text & Attribute.DefaultTo<'Opis'>;
     link: Attribute.String & Attribute.DefaultTo<'#'>;
     images: Attribute.Media & Attribute.Required;
     weight: Attribute.String;
