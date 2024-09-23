@@ -21,12 +21,9 @@
     "bgImage": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "bgMask": {
@@ -104,6 +101,13 @@
       "repeatable": true,
       "component": "other.paragraph-links",
       "required": true
+    },
+    "bgVideo": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

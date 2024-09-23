@@ -21,12 +21,9 @@
     "bgImage": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "headerAs": {
@@ -102,6 +99,13 @@
         "very-light-gray"
       ],
       "default": "green"
+    },
+    "bgVideo": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

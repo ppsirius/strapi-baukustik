@@ -203,7 +203,7 @@ export interface SectionsBlock3 extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'gray'>;
-    bgImage: Attribute.Media & Attribute.Required;
+    bgImage: Attribute.Media;
     headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
       Attribute.DefaultTo<'h2'>;
     header: Attribute.String &
@@ -231,6 +231,7 @@ export interface SectionsBlock3 extends Schema.Component {
     linkUrl2: Attribute.String;
     linkText2: Attribute.String;
     bgMask: Attribute.Boolean & Attribute.DefaultTo<false>;
+    bgVideo: Attribute.Media;
   };
 }
 
@@ -245,7 +246,7 @@ export interface SectionsBlock4 extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'gray'>;
-    bgImage: Attribute.Media & Attribute.Required;
+    bgImage: Attribute.Media;
     headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'a']> &
       Attribute.DefaultTo<'h2'>;
     header: Attribute.String &
@@ -270,6 +271,7 @@ export interface SectionsBlock4 extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'green'>;
+    bgVideo: Attribute.Media;
   };
 }
 
@@ -324,7 +326,7 @@ export interface SectionsBlock6 extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'gray'>;
-    bgImage: Attribute.Media & Attribute.Required;
+    bgImage: Attribute.Media;
     bgMask: Attribute.Boolean & Attribute.DefaultTo<false>;
     headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
       Attribute.DefaultTo<'h2'>;
@@ -350,6 +352,7 @@ export interface SectionsBlock6 extends Schema.Component {
     linkText2: Attribute.String;
     paragraphLinks: Attribute.Component<'other.paragraph-links', true> &
       Attribute.Required;
+    bgVideo: Attribute.Media;
   };
 }
 

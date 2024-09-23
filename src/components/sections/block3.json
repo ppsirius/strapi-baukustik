@@ -21,12 +21,9 @@
     "bgImage": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
+        "images"
       ]
     },
     "headerAs": {
@@ -106,6 +103,14 @@
     "bgMask": {
       "type": "boolean",
       "default": false
+    },
+    "bgVideo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
     }
   }
 }
