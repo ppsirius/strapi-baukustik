@@ -62,6 +62,9 @@
     },
     "subCategory": {
       "type": "string"
+    },
+    "title": {
+      "type": "string"
     }
   }
 }

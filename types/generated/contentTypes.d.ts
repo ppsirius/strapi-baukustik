@@ -1045,6 +1045,7 @@ export interface ApiPagePage extends Schema.CollectionType {
     description: Attribute.String;
     category: Attribute.String;
     subCategory: Attribute.String;
+    title: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
