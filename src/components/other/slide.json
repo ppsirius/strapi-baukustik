@@ -1,0 +1,67 @@
+{
+  "collectionName": "components_other_slides",
+  "info": {
+    "displayName": "slide",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "default": "Hero 6"
+    },
+    "headerAs": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "h1"
+    },
+    "headerColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "white"
+    },
+    "linkColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "white"
+    },
+    "linkUrl1": {
+      "type": "string",
+      "default": "#"
+    },
+    "linkText1": {
+      "type": "string",
+      "default": "Zobacz realizację →"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_sections_hero6_products",
+  "info": {
+    "displayName": "Hero6 - Product",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "gray"
+    },
+    "slide": {
+      "displayName": "slide",
+      "type": "component",
+      "repeatable": true,
+      "component": "other.slide"
+    },
+    "bgMask": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

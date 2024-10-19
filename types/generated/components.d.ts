@@ -46,6 +46,32 @@ export interface OtherProducts extends Schema.Component {
   };
 }
 
+export interface OtherSlide extends Schema.Component {
+  collectionName: 'components_other_slides';
+  info: {
+    displayName: 'slide';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    header: Attribute.String & Attribute.DefaultTo<'Hero 6'>;
+    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
+      Attribute.DefaultTo<'h1'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText1: Attribute.String &
+      Attribute.DefaultTo<'Zobacz realizacj\u0119 \u2192'>;
+    images: Attribute.Media;
+  };
+}
+
 export interface OtherTable extends Schema.Component {
   collectionName: 'components_other_tables';
   info: {
@@ -617,6 +643,23 @@ export interface SectionsHero5 extends Schema.Component {
   };
 }
 
+export interface SectionsHero6Product extends Schema.Component {
+  collectionName: 'components_sections_hero6_products';
+  info: {
+    displayName: 'Hero6 - Product';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'gray'>;
+    slide: Attribute.Component<'other.slide', true>;
+    bgMask: Attribute.Boolean & Attribute.DefaultTo<true>;
+  };
+}
+
 export interface SectionsHero6 extends Schema.Component {
   collectionName: 'components_sections_hero6s';
   info: {
@@ -945,6 +988,7 @@ declare module '@strapi/types' {
       'other.paragraph-links': OtherParagraphLinks;
       'other.persons': OtherPersons;
       'other.products': OtherProducts;
+      'other.slide': OtherSlide;
       'other.table': OtherTable;
       'other.tags': OtherTags;
       'sections.acoustic-parameter': SectionsAcousticParameter;
@@ -962,6 +1006,7 @@ declare module '@strapi/types' {
       'sections.hero3': SectionsHero3;
       'sections.hero4': SectionsHero4;
       'sections.hero5': SectionsHero5;
+      'sections.hero6-product': SectionsHero6Product;
       'sections.hero6': SectionsHero6;
       'sections.hero7': SectionsHero7;
       'sections.partners-grid': SectionsPartnersGrid;
