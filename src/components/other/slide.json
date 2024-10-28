@@ -35,18 +35,6 @@
       ],
       "default": "white"
     },
-    "linkColor": {
-      "type": "enumeration",
-      "enum": [
-        "white",
-        "green",
-        "black",
-        "gray",
-        "light-gray",
-        "very-light-gray"
-      ],
-      "default": "white"
-    },
     "linkUrl1": {
       "type": "string",
       "default": "#"
@@ -56,12 +44,17 @@
       "default": "Zobacz realizację →"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "videos"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "bgMask": {
+      "type": "boolean",
+      "default": true
     }
   }
 }

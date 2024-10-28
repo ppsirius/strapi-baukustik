@@ -61,14 +61,11 @@ export interface OtherSlide extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'white'>;
-    linkColor: Attribute.Enumeration<
-      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
-    > &
-      Attribute.DefaultTo<'white'>;
     linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
     linkText1: Attribute.String &
       Attribute.DefaultTo<'Zobacz realizacj\u0119 \u2192'>;
     images: Attribute.Media;
+    bgMask: Attribute.Boolean & Attribute.DefaultTo<true>;
   };
 }
 
@@ -656,7 +653,7 @@ export interface SectionsHero6Product extends Schema.Component {
     > &
       Attribute.DefaultTo<'gray'>;
     slide: Attribute.Component<'other.slide', true>;
-    bgMask: Attribute.Boolean & Attribute.DefaultTo<true>;
+    showBreadcrumb: Attribute.Boolean & Attribute.DefaultTo<true>;
   };
 }
 
