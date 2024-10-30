@@ -22,9 +22,7 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "bgMask": {
       "type": "boolean",
@@ -32,14 +30,7 @@
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": [
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6"
-      ],
+      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
       "default": "h2"
     },
     "header": {
@@ -103,11 +94,13 @@
       "required": true
     },
     "bgVideo": {
-      "allowedTypes": [
-        "videos"
-      ],
+      "allowedTypes": ["videos"],
       "type": "media",
       "multiple": false
+    },
+    "scrollName": {
+      "type": "string",
+      "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
     }
   }
 }

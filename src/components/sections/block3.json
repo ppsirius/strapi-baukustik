@@ -22,20 +22,11 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": [
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6"
-      ],
+      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
       "default": "h2"
     },
     "header": {
@@ -108,9 +99,11 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "videos"
-      ]
+      "allowedTypes": ["videos"]
+    },
+    "scrollName": {
+      "type": "string",
+      "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
     }
   }
 }

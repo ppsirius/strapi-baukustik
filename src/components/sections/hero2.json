@@ -43,9 +43,7 @@
       "type": "media",
       "multiple": true,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "linkUrl2": {
       "type": "string",
@@ -54,6 +52,10 @@
     "linkText2": {
       "type": "string",
       "default": "Produkty →"
+    },
+    "scrollName": {
+      "type": "string",
+      "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
     }
   }
 }

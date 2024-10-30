@@ -110,6 +110,10 @@
       "type": "string",
       "default": "Wyślij →",
       "required": true
+    },
+    "scrollName": {
+      "type": "string",
+      "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
     }
   }
 }

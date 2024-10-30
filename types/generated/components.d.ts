@@ -129,6 +129,7 @@ export interface SectionsAcousticParameter extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'green'>;
+    scrollName: Attribute.String;
   };
 }
 
@@ -171,6 +172,7 @@ export interface SectionsBlock1 extends Schema.Component {
       Attribute.DefaultTo<'Zobacz inne produkty \u2192'>;
     linkUrl2: Attribute.String;
     linkText2: Attribute.String;
+    scrollName: Attribute.String;
   };
 }
 
@@ -212,6 +214,7 @@ export interface SectionsBlock2 extends Schema.Component {
       Attribute.DefaultTo<'Zobacz inne produkty \u2192'>;
     linkUrl2: Attribute.String;
     linkText2: Attribute.String;
+    scrollName: Attribute.String;
   };
 }
 
@@ -255,6 +258,7 @@ export interface SectionsBlock3 extends Schema.Component {
     linkText2: Attribute.String;
     bgMask: Attribute.Boolean & Attribute.DefaultTo<false>;
     bgVideo: Attribute.Media;
+    scrollName: Attribute.String;
   };
 }
 
@@ -295,6 +299,7 @@ export interface SectionsBlock4 extends Schema.Component {
     > &
       Attribute.DefaultTo<'green'>;
     bgVideo: Attribute.Media;
+    scrollName: Attribute.String;
   };
 }
 
@@ -335,6 +340,7 @@ export interface SectionsBlock5 extends Schema.Component {
     linkText2: Attribute.String;
     paragraphLinks: Attribute.Component<'other.paragraph-links', true> &
       Attribute.Required;
+    scrollName: Attribute.String;
   };
 }
 
@@ -376,6 +382,7 @@ export interface SectionsBlock6 extends Schema.Component {
     paragraphLinks: Attribute.Component<'other.paragraph-links', true> &
       Attribute.Required;
     bgVideo: Attribute.Media;
+    scrollName: Attribute.String;
   };
 }
 
@@ -419,6 +426,7 @@ export interface SectionsBlock7 extends Schema.Component {
     url: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'uynCeLheCPc'>;
+    scrollName: Attribute.String;
   };
 }
 
@@ -458,6 +466,7 @@ export interface SectionsContactPerson extends Schema.Component {
       Attribute.DefaultTo<'SPECJALISTA DS. OBS\u0141UGI KLIENTA'>;
     email: Attribute.String & Attribute.DefaultTo<'info@baukustik.com'>;
     phone: Attribute.String & Attribute.DefaultTo<'+48 777 777 777'>;
+    scrollName: Attribute.String;
   };
 }
 
@@ -503,6 +512,7 @@ export interface SectionsFiles extends Schema.Component {
     linkUrl1: Attribute.String & Attribute.DefaultTo<'/kontakt'>;
     linkText2: Attribute.String;
     linkUrl2: Attribute.String;
+    scrollName: Attribute.String;
   };
 }
 
@@ -533,6 +543,7 @@ export interface SectionsHero1 extends Schema.Component {
     linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
     linkText1: Attribute.String & Attribute.DefaultTo<'Zobacz produkty \u2192'>;
     images: Attribute.Media & Attribute.Required;
+    scrollName: Attribute.String;
   };
 }
 
@@ -557,6 +568,7 @@ export interface SectionsHero2 extends Schema.Component {
     images: Attribute.Media & Attribute.Required;
     linkUrl2: Attribute.String & Attribute.DefaultTo<'#'>;
     linkText2: Attribute.String & Attribute.DefaultTo<'Produkty \u2192'>;
+    scrollName: Attribute.String;
   };
 }
 
@@ -587,6 +599,7 @@ export interface SectionsHero3 extends Schema.Component {
     linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
     linkText1: Attribute.String & Attribute.DefaultTo<'Zobacz produkty \u2192'>;
     images: Attribute.Media & Attribute.Required;
+    scrollName: Attribute.String;
   };
 }
 
@@ -617,6 +630,7 @@ export interface SectionsHero4 extends Schema.Component {
     linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
     linkText1: Attribute.String & Attribute.DefaultTo<'Zobacz produkty \u2192'>;
     images: Attribute.Media & Attribute.Required;
+    scrollName: Attribute.String;
   };
 }
 
@@ -637,6 +651,7 @@ export interface SectionsHero5 extends Schema.Component {
     > &
       Attribute.DefaultTo<'white'>;
     paragraph: Attribute.Text & Attribute.Required;
+    scrollName: Attribute.String;
   };
 }
 
@@ -654,6 +669,7 @@ export interface SectionsHero6Product extends Schema.Component {
       Attribute.DefaultTo<'gray'>;
     slide: Attribute.Component<'other.slide', true>;
     showBreadcrumb: Attribute.Boolean & Attribute.DefaultTo<true>;
+    scrollName: Attribute.String;
   };
 }
 
@@ -684,6 +700,7 @@ export interface SectionsHero6 extends Schema.Component {
     linkText1: Attribute.String &
       Attribute.DefaultTo<'Zobacz realizacj\u0119 \u2192'>;
     images: Attribute.Media & Attribute.Required;
+    scrollName: Attribute.String;
   };
 }
 
@@ -747,6 +764,7 @@ export interface SectionsHero7 extends Schema.Component {
     formSubmit: Attribute.String &
       Attribute.Required &
       Attribute.DefaultTo<'Wy\u015Blij \u2192'>;
+    scrollName: Attribute.String;
   };
 }
 
@@ -786,6 +804,7 @@ export interface SectionsPartnersGrid extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'green'>;
+    scrollName: Attribute.String;
   };
 }
 
@@ -819,6 +838,7 @@ export interface SectionsProductData extends Schema.Component {
       Attribute.DefaultTo<'Link do powi\u0105zanego zagadnienia \u2192 '>;
     linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
     table: Attribute.Component<'other.table', true>;
+    scrollName: Attribute.String;
   };
 }
 
@@ -848,6 +868,7 @@ export interface SectionsProduct1 extends Schema.Component {
     linkText2: Attribute.String;
     linkUrl2: Attribute.String;
     products: Attribute.Component<'other.products', true> & Attribute.Required;
+    scrollName: Attribute.String;
   };
 }
 
@@ -877,6 +898,7 @@ export interface SectionsProduct2 extends Schema.Component {
     linkText2: Attribute.String;
     linkUrl2: Attribute.String;
     products: Attribute.Component<'other.products', true> & Attribute.Required;
+    scrollName: Attribute.String;
   };
 }
 
@@ -906,6 +928,7 @@ export interface SectionsProduct3 extends Schema.Component {
     linkText2: Attribute.String;
     linkUrl2: Attribute.String;
     products: Attribute.Component<'other.products', true> & Attribute.Required;
+    scrollName: Attribute.String;
   };
 }
 
@@ -935,6 +958,7 @@ export interface SectionsProduct4 extends Schema.Component {
     linkText2: Attribute.String;
     linkUrl2: Attribute.String;
     products: Attribute.Component<'other.products', true> & Attribute.Required;
+    scrollName: Attribute.String;
   };
 }
 
@@ -976,6 +1000,7 @@ export interface SectionsTeam extends Schema.Component {
     > &
       Attribute.DefaultTo<'green'>;
     persons: Attribute.Component<'other.persons', true>;
+    scrollName: Attribute.String;
   };
 }
 

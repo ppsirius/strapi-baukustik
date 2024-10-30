@@ -73,9 +73,7 @@
       "type": "media",
       "multiple": true,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "linkColor": {
       "type": "enumeration",
@@ -88,6 +86,10 @@
         "very-light-gray"
       ],
       "default": "green"
+    },
+    "scrollName": {
+      "type": "string",
+      "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
     }
   }
 }

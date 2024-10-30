@@ -103,6 +103,10 @@
     },
     "linkText2": {
       "type": "string"
+    },
+    "scrollName": {
+      "type": "string",
+      "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
     }
   }
 }

@@ -51,9 +51,7 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "linkColor": {
       "type": "enumeration",
@@ -80,6 +78,10 @@
       "type": "component",
       "repeatable": true,
       "component": "other.table"
+    },
+    "scrollName": {
+      "type": "string",
+      "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
     }
   }
 }

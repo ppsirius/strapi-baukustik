@@ -13,14 +13,7 @@
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": [
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6"
-      ],
+      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
       "default": "h5"
     },
     "headerColor": {
@@ -79,9 +72,7 @@
       "type": "media",
       "multiple": false,
       "required": true,
-      "allowedTypes": [
-        "images"
-      ]
+      "allowedTypes": ["images"]
     },
     "name": {
       "type": "string",
@@ -99,6 +90,10 @@
     "phone": {
       "type": "string",
       "default": "+48 777 777 777"
+    },
+    "scrollName": {
+      "type": "string",
+      "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
     }
   }
 }

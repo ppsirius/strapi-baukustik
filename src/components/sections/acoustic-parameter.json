@@ -25,14 +25,7 @@
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": [
-        "h1",
-        "h2",
-        "h3",
-        "h4",
-        "h5",
-        "h6"
-      ],
+      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
       "default": "h3"
     },
     "headerColor": {
@@ -51,12 +44,7 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images", "files", "videos", "audios"]
     },
     "paramTable": {
       "type": "json",
@@ -81,6 +69,10 @@
         "very-light-gray"
       ],
       "default": "green"
+    },
+    "scrollName": {
+      "type": "string",
+      "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
     }
   }
 }
