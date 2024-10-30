@@ -13,7 +13,14 @@
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
       "default": "h5"
     },
     "headerColor": {
@@ -68,32 +75,14 @@
     "header2": {
       "type": "string"
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": ["images"]
-    },
-    "name": {
-      "type": "string",
-      "default": "Katarzyna Szymerska"
-    },
-    "position": {
-      "type": "string",
-      "default": "SPECJALISTA DS. OBSŁUGI KLIENTA"
-    },
-    "email": {
-      "type": "string",
-      "regex": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
-      "default": "info@baukustik.com"
-    },
-    "phone": {
-      "type": "string",
-      "default": "+48 777 777 777"
-    },
     "scrollName": {
       "type": "string",
       "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
+    },
+    "employe": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::employe.employe"
     }
   }
 }

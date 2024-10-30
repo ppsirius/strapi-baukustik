@@ -460,13 +460,12 @@ export interface SectionsContactPerson extends Schema.Component {
       Attribute.DefaultTo<'Skontaktuj si\u0119 z nami \u2192'>;
     linkUrl1: Attribute.String & Attribute.DefaultTo<'/kontakt'>;
     header2: Attribute.String;
-    image: Attribute.Media & Attribute.Required;
-    name: Attribute.String & Attribute.DefaultTo<'Katarzyna Szymerska'>;
-    position: Attribute.String &
-      Attribute.DefaultTo<'SPECJALISTA DS. OBS\u0141UGI KLIENTA'>;
-    email: Attribute.String & Attribute.DefaultTo<'info@baukustik.com'>;
-    phone: Attribute.String & Attribute.DefaultTo<'+48 777 777 777'>;
     scrollName: Attribute.String;
+    employe: Attribute.Relation<
+      'sections.contact-person',
+      'oneToOne',
+      'api::employe.employe'
+    >;
   };
 }
 

@@ -999,6 +999,42 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
 }
 
+export interface ApiEmployeEmploye extends Schema.CollectionType {
+  collectionName: 'employes';
+  info: {
+    singularName: 'employe';
+    pluralName: 'employes';
+    displayName: 'Employee';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    image: Attribute.Media;
+    position: Attribute.String;
+    email: Attribute.Email;
+    phone: Attribute.String;
+    employeeId: Attribute.UID<'api::employe.employe', 'name'> &
+      Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::employe.employe',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::employe.employe',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiPagePage extends Schema.CollectionType {
   collectionName: 'pages';
   info: {
@@ -1140,6 +1176,7 @@ declare module '@strapi/types' {
       'plugin::navigation.navigation-item': PluginNavigationNavigationItem;
       'plugin::navigation.navigations-items-related': PluginNavigationNavigationsItemsRelated;
       'plugin::i18n.locale': PluginI18NLocale;
+      'api::employe.employe': ApiEmployeEmploye;
       'api::page.page': ApiPagePage;
       'api::realization.realization': ApiRealizationRealization;
     }
