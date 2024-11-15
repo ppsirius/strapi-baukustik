@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_other_slide2s",
+  "info": {
+    "displayName": "slide2",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "string",
+      "default": "Hero "
+    },
+    "headerAs": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "h1"
+    },
+    "headerColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "white"
+    },
+    "headerBold": {
+      "type": "string"
+    },
+    "linkUrl1": {
+      "type": "string",
+      "default": "#"
+    },
+    "linkText1": {
+      "type": "string",
+      "default": "Zobacz realizację →"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "bgMask": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

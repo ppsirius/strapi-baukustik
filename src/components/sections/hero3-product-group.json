@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_sections_hero6_products",
+  "collectionName": "components_sections_hero3_product_groups",
   "info": {
-    "displayName": "Hero6 - Realization",
+    "displayName": "Hero3 - ProductGroup",
     "icon": "picture",
     "description": ""
   },
@@ -19,11 +19,11 @@
       ],
       "default": "gray"
     },
-    "slide": {
-      "displayName": "slide",
+    "slide2": {
+      "displayName": "slide2",
       "type": "component",
       "repeatable": true,
-      "component": "other.slide"
+      "component": "other.slide2"
     },
     "showBreadcrumb": {
       "type": "boolean",
