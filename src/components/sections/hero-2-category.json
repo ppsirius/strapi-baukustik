@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_sections_hero5s",
+  "collectionName": "components_sections_hero_2_categories",
   "info": {
-    "displayName": "Hero5 - About",
+    "displayName": "Hero2 - Category",
     "icon": "picture",
     "description": ""
   },
@@ -17,23 +17,17 @@
         "light-gray",
         "very-light-gray"
       ],
-      "default": "green"
+      "default": "gray"
     },
-    "paragraphColor": {
-      "type": "enumeration",
-      "enum": [
-        "white",
-        "green",
-        "black",
-        "gray",
-        "light-gray",
-        "very-light-gray"
-      ],
-      "default": "white"
+    "slide3": {
+      "displayName": "Slide3",
+      "type": "component",
+      "repeatable": true,
+      "component": "other.slide3"
     },
-    "paragraph": {
-      "type": "text",
-      "required": true
+    "showBreadcrumb": {
+      "type": "boolean",
+      "default": true
     },
     "scrollName": {
       "type": "string",

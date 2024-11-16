@@ -1,7 +1,7 @@
 {
   "collectionName": "components_sections_block5s",
   "info": {
-    "displayName": "Block5",
+    "displayName": "Block5 - Links+Pic",
     "description": ""
   },
   "options": {},
@@ -26,11 +26,20 @@
       "type": "media",
       "multiple": true,
       "required": true,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
       "default": "h2"
     },
     "header": {

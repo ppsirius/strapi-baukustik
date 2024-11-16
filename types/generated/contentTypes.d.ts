@@ -1062,9 +1062,7 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.hero2',
         'sections.hero3',
         'sections.hero4',
-        'sections.hero5',
         'sections.hero6',
-        'sections.hero7',
         'sections.realization-grid',
         'sections.product1',
         'sections.product2',
@@ -1077,9 +1075,12 @@ export interface ApiPagePage extends Schema.CollectionType {
         'sections.product-data',
         'sections.acoustic-parameter',
         'sections.hero1-home',
+        'sections.hero-2-category',
         'sections.hero3-product-group',
         'sections.hero4-product',
-        'sections.hero6-product'
+        'sections.hero5',
+        'sections.hero6-product',
+        'sections.hero7'
       ]
     >;
     description: Attribute.String;

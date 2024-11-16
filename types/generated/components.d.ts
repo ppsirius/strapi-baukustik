@@ -93,6 +93,29 @@ export interface OtherSlide2 extends Schema.Component {
   };
 }
 
+export interface OtherSlide3 extends Schema.Component {
+  collectionName: 'components_other_slide3s';
+  info: {
+    displayName: 'Slide3';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText1: Attribute.String &
+      Attribute.DefaultTo<'Zobacz realizacj\u0119 \u2192'>;
+    linkText2: Attribute.String &
+      Attribute.DefaultTo<'Zobacz realizacj\u0119 \u2192'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'white'>;
+    images: Attribute.Media & Attribute.Required;
+    bgMask: Attribute.Boolean & Attribute.DefaultTo<true>;
+    linkUrl2: Attribute.String & Attribute.DefaultTo<'#'>;
+  };
+}
+
 export interface OtherTable extends Schema.Component {
   collectionName: 'components_other_tables';
   info: {
@@ -160,7 +183,7 @@ export interface SectionsAcousticParameter extends Schema.Component {
 export interface SectionsBlock1 extends Schema.Component {
   collectionName: 'components_sections_block1s';
   info: {
-    displayName: 'Block1';
+    displayName: 'Block1 - Txt+Pic';
     description: '';
   };
   attributes: {
@@ -203,7 +226,7 @@ export interface SectionsBlock1 extends Schema.Component {
 export interface SectionsBlock2 extends Schema.Component {
   collectionName: 'components_sections_block2s';
   info: {
-    displayName: 'Block2';
+    displayName: 'Block2 - Txt+PicHalf';
     description: '';
   };
   attributes: {
@@ -245,7 +268,7 @@ export interface SectionsBlock2 extends Schema.Component {
 export interface SectionsBlock3 extends Schema.Component {
   collectionName: 'components_sections_block3s';
   info: {
-    displayName: 'Block3';
+    displayName: 'Block3 - Txt+PicBG';
     description: '';
   };
   attributes: {
@@ -289,7 +312,7 @@ export interface SectionsBlock3 extends Schema.Component {
 export interface SectionsBlock4 extends Schema.Component {
   collectionName: 'components_sections_block4s';
   info: {
-    displayName: 'Block4';
+    displayName: 'Block4 - Title+BG';
     description: '';
   };
   attributes: {
@@ -330,7 +353,7 @@ export interface SectionsBlock4 extends Schema.Component {
 export interface SectionsBlock5 extends Schema.Component {
   collectionName: 'components_sections_block5s';
   info: {
-    displayName: 'Block5';
+    displayName: 'Block5 - Links+Pic';
     description: '';
   };
   attributes: {
@@ -371,7 +394,7 @@ export interface SectionsBlock5 extends Schema.Component {
 export interface SectionsBlock6 extends Schema.Component {
   collectionName: 'components_sections_block6s';
   info: {
-    displayName: 'Block6';
+    displayName: 'Block6 - Links+BG';
     description: '';
   };
   attributes: {
@@ -413,7 +436,7 @@ export interface SectionsBlock6 extends Schema.Component {
 export interface SectionsBlock7 extends Schema.Component {
   collectionName: 'components_sections_block7s';
   info: {
-    displayName: 'Block7';
+    displayName: 'Block7 - Txt+VideoEmbed';
     description: '';
   };
   attributes: {
@@ -535,6 +558,24 @@ export interface SectionsFiles extends Schema.Component {
     linkUrl1: Attribute.String & Attribute.DefaultTo<'/kontakt'>;
     linkText2: Attribute.String;
     linkUrl2: Attribute.String;
+    scrollName: Attribute.String;
+  };
+}
+
+export interface SectionsHero2Category extends Schema.Component {
+  collectionName: 'components_sections_hero_2_categories';
+  info: {
+    displayName: 'Hero2 - Category';
+    icon: 'picture';
+    description: '';
+  };
+  attributes: {
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'gray'>;
+    slide3: Attribute.Component<'other.slide3', true>;
+    showBreadcrumb: Attribute.Boolean & Attribute.DefaultTo<true>;
     scrollName: Attribute.String;
   };
 }
@@ -714,7 +755,7 @@ export interface SectionsHero4 extends Schema.Component {
 export interface SectionsHero5 extends Schema.Component {
   collectionName: 'components_sections_hero5s';
   info: {
-    displayName: 'Hero5';
+    displayName: 'Hero5 - About';
     icon: 'picture';
     description: '';
   };
@@ -784,7 +825,7 @@ export interface SectionsHero6 extends Schema.Component {
 export interface SectionsHero7 extends Schema.Component {
   collectionName: 'components_sections_hero7s';
   info: {
-    displayName: 'Hero7';
+    displayName: 'Hero7 - Contact';
     icon: 'picture';
     description: '';
   };
@@ -922,7 +963,7 @@ export interface SectionsProductData extends Schema.Component {
 export interface SectionsProduct1 extends Schema.Component {
   collectionName: 'components_sections_product1s';
   info: {
-    displayName: 'Product1';
+    displayName: 'Product1 - 3 Rects';
     icon: 'archive';
     description: '';
   };
@@ -952,7 +993,7 @@ export interface SectionsProduct1 extends Schema.Component {
 export interface SectionsProduct2 extends Schema.Component {
   collectionName: 'components_sections_product2s';
   info: {
-    displayName: 'Product2';
+    displayName: 'Product2 - 3 Rects Services';
     icon: 'archive';
     description: '';
   };
@@ -982,7 +1023,7 @@ export interface SectionsProduct2 extends Schema.Component {
 export interface SectionsProduct3 extends Schema.Component {
   collectionName: 'components_sections_product3s';
   info: {
-    displayName: 'Product3';
+    displayName: 'Product3 - 4 Squares';
     icon: 'archive';
     description: '';
   };
@@ -1012,7 +1053,7 @@ export interface SectionsProduct3 extends Schema.Component {
 export interface SectionsProduct4 extends Schema.Component {
   collectionName: 'components_sections_product4s';
   info: {
-    displayName: 'Product4';
+    displayName: 'Product4 - 6 Squares';
     icon: 'archive';
     description: '';
   };
@@ -1089,6 +1130,7 @@ declare module '@strapi/types' {
       'other.products': OtherProducts;
       'other.slide': OtherSlide;
       'other.slide2': OtherSlide2;
+      'other.slide3': OtherSlide3;
       'other.table': OtherTable;
       'other.tags': OtherTags;
       'sections.acoustic-parameter': SectionsAcousticParameter;
@@ -1101,6 +1143,7 @@ declare module '@strapi/types' {
       'sections.block7': SectionsBlock7;
       'sections.contact-person': SectionsContactPerson;
       'sections.files': SectionsFiles;
+      'sections.hero-2-category': SectionsHero2Category;
       'sections.hero1-home': SectionsHero1Home;
       'sections.hero1': SectionsHero1;
       'sections.hero2': SectionsHero2;

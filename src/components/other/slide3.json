@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_other_slide3s",
+  "info": {
+    "displayName": "Slide3",
+    "icon": "picture",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "linkUrl1": {
+      "type": "string",
+      "default": "#"
+    },
+    "linkText1": {
+      "type": "string",
+      "default": "Zobacz realizację →"
+    },
+    "linkText2": {
+      "type": "string",
+      "default": "Zobacz realizację →"
+    },
+    "linkColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "white"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "bgMask": {
+      "type": "boolean",
+      "default": true
+    },
+    "linkUrl2": {
+      "type": "string",
+      "default": "#"
+    }
+  }
+}

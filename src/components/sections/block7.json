@@ -1,7 +1,7 @@
 {
   "collectionName": "components_sections_block7s",
   "info": {
-    "displayName": "Block7",
+    "displayName": "Block7 - Txt+VideoEmbed",
     "description": ""
   },
   "options": {},
@@ -20,7 +20,14 @@
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
       "default": "h2"
     },
     "header": {

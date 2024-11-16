@@ -1,7 +1,7 @@
 {
   "collectionName": "components_sections_block3s",
   "info": {
-    "displayName": "Block3",
+    "displayName": "Block3 - Txt+PicBG",
     "description": ""
   },
   "options": {},
@@ -22,11 +22,20 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
       "default": "h2"
     },
     "header": {
@@ -99,7 +108,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["videos"]
+      "allowedTypes": [
+        "videos"
+      ]
     },
     "scrollName": {
       "type": "string",

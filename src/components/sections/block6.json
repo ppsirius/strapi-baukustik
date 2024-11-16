@@ -1,7 +1,7 @@
 {
   "collectionName": "components_sections_block6s",
   "info": {
-    "displayName": "Block6",
+    "displayName": "Block6 - Links+BG",
     "description": ""
   },
   "options": {},
@@ -22,7 +22,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "bgMask": {
       "type": "boolean",
@@ -30,7 +32,14 @@
     },
     "headerAs": {
       "type": "enumeration",
-      "enum": ["h1", "h2", "h3", "h4", "h5", "h6"],
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
       "default": "h2"
     },
     "header": {
@@ -94,9 +103,12 @@
       "required": true
     },
     "bgVideo": {
-      "allowedTypes": ["videos"],
       "type": "media",
-      "multiple": false
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
     },
     "scrollName": {
       "type": "string",
