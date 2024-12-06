@@ -1,0 +1,67 @@
+{
+  "collectionName": "components_sections_privacy_policies",
+  "info": {
+    "displayName": "PrivacyPolicy",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "light-gray"
+    },
+    "header": {
+      "type": "string",
+      "default": "Polityka prywatności",
+      "required": true
+    },
+    "headerColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
+    },
+    "contentColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "black"
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "popupText": {
+      "type": "string"
+    },
+    "popupLinkText": {
+      "type": "string"
+    },
+    "popupLink": {
+      "type": "string"
+    },
+    "popupButtonText": {
+      "type": "string"
+    }
+  }
+}

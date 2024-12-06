@@ -926,6 +926,37 @@ export interface SectionsPartnersGrid extends Schema.Component {
   };
 }
 
+export interface SectionsPrivacyPolicy extends Schema.Component {
+  collectionName: 'components_sections_privacy_policies';
+  info: {
+    displayName: 'PrivacyPolicy';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'light-gray'>;
+    header: Attribute.String &
+      Attribute.Required &
+      Attribute.DefaultTo<'Polityka prywatno\u015Bci'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    contentColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
+    content: Attribute.Blocks;
+    popupText: Attribute.String;
+    popupLinkText: Attribute.String;
+    popupLink: Attribute.String;
+    popupButtonText: Attribute.String;
+  };
+}
+
 export interface SectionsProductData extends Schema.Component {
   collectionName: 'components_sections_product_data';
   info: {
@@ -1156,6 +1187,7 @@ declare module '@strapi/types' {
       'sections.hero6': SectionsHero6;
       'sections.hero7': SectionsHero7;
       'sections.partners-grid': SectionsPartnersGrid;
+      'sections.privacy-policy': SectionsPrivacyPolicy;
       'sections.product-data': SectionsProductData;
       'sections.product1': SectionsProduct1;
       'sections.product2': SectionsProduct2;
