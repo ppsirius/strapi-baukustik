@@ -191,7 +191,6 @@ export interface SectionsBlock1 extends Schema.Component {
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
       Attribute.DefaultTo<'light-gray'>;
-    blockImageHeight: Attribute.Boolean & Attribute.DefaultTo<true>;
     images: Attribute.Media;
     headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
       Attribute.DefaultTo<'h2'>;
