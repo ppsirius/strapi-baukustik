@@ -1018,6 +1018,10 @@ export interface SectionsProduct1 extends Schema.Component {
     linkUrl2: Attribute.String;
     products: Attribute.Component<'other.products', true> & Attribute.Required;
     scrollName: Attribute.String;
+    headeHoverColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
   };
 }
 
@@ -1048,6 +1052,10 @@ export interface SectionsProduct2 extends Schema.Component {
     linkUrl2: Attribute.String;
     products: Attribute.Component<'other.products', true> & Attribute.Required;
     scrollName: Attribute.String;
+    headeHoverColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
   };
 }
 
@@ -1078,6 +1086,10 @@ export interface SectionsProduct3 extends Schema.Component {
     linkUrl2: Attribute.String;
     products: Attribute.Component<'other.products', true> & Attribute.Required;
     scrollName: Attribute.String;
+    headeHoverColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
   };
 }
 
@@ -1108,6 +1120,10 @@ export interface SectionsProduct4 extends Schema.Component {
     linkUrl2: Attribute.String;
     products: Attribute.Component<'other.products', true> & Attribute.Required;
     scrollName: Attribute.String;
+    headeHoverColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
   };
 }
 

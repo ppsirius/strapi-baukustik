@@ -71,6 +71,18 @@
     "scrollName": {
       "type": "string",
       "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
+    },
+    "headeHoverColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "black"
     }
   }
 }
