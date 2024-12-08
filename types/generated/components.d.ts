@@ -1150,6 +1150,12 @@ export interface SectionsTeam extends Schema.Component {
       Attribute.DefaultTo<'green'>;
     persons: Attribute.Component<'other.persons', true>;
     scrollName: Attribute.String;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText1: Attribute.String;
   };
 }
 

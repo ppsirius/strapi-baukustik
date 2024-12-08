@@ -68,6 +68,25 @@
     "scrollName": {
       "type": "string",
       "regex": "^[A-Za-z][A-Za-z0-9\\-_:\\.]*$"
+    },
+    "linkColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
+    },
+    "linkUrl1": {
+      "type": "string",
+      "default": "#"
+    },
+    "linkText1": {
+      "type": "string"
     }
   }
 }
