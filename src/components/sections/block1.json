@@ -18,10 +18,6 @@
       ],
       "default": "light-gray"
     },
-    "blockImageHeight": {
-      "type": "boolean",
-      "default": true
-    },
     "images": {
       "type": "media",
       "multiple": true,
