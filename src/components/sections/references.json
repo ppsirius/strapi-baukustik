@@ -1,0 +1,102 @@
+{
+  "collectionName": "components_sections_references",
+  "info": {
+    "displayName": "References",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bg": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "light-gray"
+    },
+    "header": {
+      "type": "string",
+      "default": "Referencje"
+    },
+    "headerAs": {
+      "type": "enumeration",
+      "enum": [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6"
+      ],
+      "default": "h4"
+    },
+    "headerColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
+    },
+    "paragraph1": {
+      "type": "text",
+      "default": "Tu będzie akapit tekstu. Zakładam kolory do wyboru – dla każdego elementu osobno, lub wg predefiniowanych schematów – jak wygodniej."
+    },
+    "paragraphColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "black"
+    },
+    "linkColor": {
+      "type": "enumeration",
+      "enum": [
+        "white",
+        "green",
+        "black",
+        "gray",
+        "light-gray",
+        "very-light-gray"
+      ],
+      "default": "green"
+    },
+    "linkUrl1": {
+      "type": "string",
+      "default": "#"
+    },
+    "linkText1": {
+      "type": "string",
+      "default": "Link do powiązanego zagadnienia →"
+    },
+    "linkUrl2": {
+      "type": "string"
+    },
+    "linkText2": {
+      "type": "string"
+    },
+    "scrollName": {
+      "type": "string"
+    },
+    "references": {
+      "displayName": "Referene",
+      "type": "component",
+      "repeatable": true,
+      "component": "other.referene"
+    }
+  }
+}

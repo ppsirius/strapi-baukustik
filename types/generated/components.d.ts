@@ -46,6 +46,29 @@ export interface OtherProducts extends Schema.Component {
   };
 }
 
+export interface OtherReferene extends Schema.Component {
+  collectionName: 'components_other_referenes';
+  info: {
+    displayName: 'Reference';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    logo: Attribute.Media;
+    paragraph: Attribute.Text;
+    paragraphColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
+    author: Attribute.String;
+    authorPostion: Attribute.String;
+    authorColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+  };
+}
+
 export interface OtherSlide extends Schema.Component {
   collectionName: 'components_other_slides';
   info: {
@@ -1137,6 +1160,45 @@ export interface SectionsRealizationGrid extends Schema.Component {
   };
 }
 
+export interface SectionsReferences extends Schema.Component {
+  collectionName: 'components_sections_references';
+  info: {
+    displayName: 'References';
+    icon: 'briefcase';
+    description: '';
+  };
+  attributes: {
+    bg: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'light-gray'>;
+    header: Attribute.String & Attribute.DefaultTo<'Referencje'>;
+    headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
+      Attribute.DefaultTo<'h4'>;
+    headerColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    paragraph1: Attribute.Text &
+      Attribute.DefaultTo<'Tu b\u0119dzie akapit tekstu. Zak\u0142adam kolory do wyboru \u2013 dla ka\u017Cdego elementu osobno, lub wg predefiniowanych schemat\u00F3w \u2013 jak wygodniej.'>;
+    paragraphColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'black'>;
+    linkColor: Attribute.Enumeration<
+      ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
+    > &
+      Attribute.DefaultTo<'green'>;
+    linkUrl1: Attribute.String & Attribute.DefaultTo<'#'>;
+    linkText1: Attribute.String &
+      Attribute.DefaultTo<'Link do powi\u0105zanego zagadnienia \u2192'>;
+    linkUrl2: Attribute.String;
+    linkText2: Attribute.String;
+    scrollName: Attribute.String;
+    references: Attribute.Component<'other.referene', true>;
+  };
+}
+
 export interface SectionsTeam extends Schema.Component {
   collectionName: 'components_sections_teams';
   info: {
@@ -1180,6 +1242,7 @@ declare module '@strapi/types' {
       'other.paragraph-links': OtherParagraphLinks;
       'other.persons': OtherPersons;
       'other.products': OtherProducts;
+      'other.referene': OtherReferene;
       'other.slide': OtherSlide;
       'other.slide2': OtherSlide2;
       'other.slide3': OtherSlide3;
@@ -1215,6 +1278,7 @@ declare module '@strapi/types' {
       'sections.product3': SectionsProduct3;
       'sections.product4': SectionsProduct4;
       'sections.realization-grid': SectionsRealizationGrid;
+      'sections.references': SectionsReferences;
       'sections.team': SectionsTeam;
     }
   }

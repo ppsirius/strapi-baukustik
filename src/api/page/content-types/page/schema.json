@@ -56,7 +56,8 @@
         "sections.hero5",
         "sections.hero6-product",
         "sections.hero7",
-        "sections.privacy-policy"
+        "sections.privacy-policy",
+        "sections.references"
       ],
       "pluginOptions": {}
     },
