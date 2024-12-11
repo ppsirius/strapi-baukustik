@@ -151,7 +151,7 @@ export interface OtherTable extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<'Nazwa parametru'>;
     images: Attribute.Media;
-    data: Attribute.String & Attribute.DefaultTo<'Warto\u015B\u0107'>;
+    data: Attribute.Text & Attribute.DefaultTo<'Warto\u015B\u0107'>;
   };
 }
 
