@@ -905,6 +905,8 @@ export interface SectionsHero7 extends Schema.Component {
       Attribute.Required &
       Attribute.DefaultTo<'Wy\u015Blij \u2192'>;
     scrollName: Attribute.String;
+    mapLatitude: Attribute.Float;
+    mapLongitude: Attribute.Float;
   };
 }
 
