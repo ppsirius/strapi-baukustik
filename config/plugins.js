@@ -50,7 +50,7 @@ module.exports = ({ env }) => ({
       awsAccessKeyId: env("AWS_ACCESS_KEY_ID"),
       awsSecretAccessKey: env("AWS_ACCESS_SECRET"),
       awsRegion: env("AWS_REGION"),
-      awsS3Bucket: "baukustik-strapi-backup-database",
+      awsS3Bucket: "baukustik-backup",
       databaseDriver: "postgres",
       databaseUrl: env("DATABASE_URL"),
       pgDumpExecutable: env("PG_DUMP_EXECUTABLE", "pg_dump"), // Use default if not defined
