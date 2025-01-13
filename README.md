@@ -1,6 +1,12 @@
 ## To run on local
 `railway run yarn run develop`
 
+`UPDATE files
+SET 
+  url = REPLACE(url, 'https://baukustik-strapi.s3.us-east-1.amazonaws.com', 'https://baukustik.s3.us-east-2.amazonaws.com'),
+  formats = REPLACE(formats::text, 'https://baukustik-strapi.s3.us-east-1.amazonaws.com', 'https://baukustik.s3.us-east-2.amazonaws.com')::jsonb
+;
+`
 
 
 # Strapi example
