@@ -26,35 +26,4 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  // "vercel-deploy": {
-  //   enabled: true,
-  //   config: {
-  //     deployHook:
-  //       "https://api.vercel.com/v1/integrations/deploy/prj_1UUEFfN0exyJBASkZ7DARC0srVMR/D1ArjGVKrP",
-  //     apiToken: env("VERCEL_API_TOKEN"),
-  //     appFilter: "baukustik",
-  //     teamFilter: "your-team-id-on-vercel",
-  //     roles: ["strapi-super-admin", "strapi-editor", "strapi-author"],
-  //   },
-  // },
-  backup: {
-    enabled: true,
-    config: {
-      cronSchedule: "50 15 * * *", // At 6 AM
-      storageService: "aws-s3",
-      awsAccessKeyId: env("AWS_ACCESS_KEY_ID"),
-      awsSecretAccessKey: env("AWS_ACCESS_SECRET"),
-      awsRegion: env("AWS_REGION"),
-      awsS3Bucket: "baukustik-backup",
-      databaseDriver: "postgres",
-      pgDumpExecutable: env("PG_DUMP_EXECUTABLE", "pg_dump"), // Use default if not defined
-      allowCleanup: true,
-      timeToKeepBackupsInSeconds: 172800, // 2 days
-      cleanupCronSchedule: "0 7 * * *", // Each day at 07:00 AM
-      errorHandler: (error, strapi) => {
-        console.log(JSON.stringify(strapi.db.config.connection));
-        console.log(error);
-      },
-    },
-  },
 });
