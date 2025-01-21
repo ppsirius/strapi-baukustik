@@ -9,7 +9,7 @@ const createEmailBody = (
   formEmail,
   formMessage
 ) => `
-New Contact Form Submission
+New contact form from baukustik.com
 
 Name: ${formName}
 Company: ${formCompany}
@@ -30,12 +30,23 @@ const sesClient = new SESClient({
 
 module.exports = {
   async send(ctx) {
-    console.log("Params:", ctx.request.body);
-    const { formName, formCompany, formPhone, formEmail, formMessage } =
-      ctx.request.body;
+    // Validate required fields
+    const requiredFields = ['formName', 'formCompany', 'formPhone', 'formEmail', 'formMessage'];
+    const missingFields = requiredFields.filter(field => !ctx.request.body[field]);
 
+    if (missingFields.length > 0) {
+      ctx.status = 400;
+      return ctx.send({
+        status: 'error',
+        code: 'VALIDATION_ERROR',
+        message: `Missing required fields: ${missingFields.join(', ')}`
+      });
+    }
+
+    const { formName, formCompany, formPhone, formEmail, formMessage } = ctx.request.body;
+    console.log('Valid email request received');
     const to = process.env.CONTACT_EMAIL_TO;
-    const from = `Contact form <${process.env.CONTACT_EMAIL_TO}>`;
+    const from = `Contact form <${process.env.CONTACT_EMAIL_FROM}>`;
 
     const emailBody = createEmailBody(
       formName,
@@ -52,7 +63,7 @@ module.exports = {
       },
       Message: {
         Subject: {
-          Data: "🥳 Contact form from Baukustik page.",
+          Data: "✉️ Contact form from Baukustik page.",
         },
         Body: {
           Text: {
@@ -68,12 +79,28 @@ module.exports = {
     try {
       const command = new SendEmailCommand(params);
       const response = await sesClient.send(command);
+
+      ctx.status = 200;
       ctx.send({
-        message: "Email sent successfully",
+        code: 'EMAIL_SENT',
+        message: 'Email sent successfully',
         messageId: response.MessageId,
+        timestamp: new Date().toISOString()
       });
     } catch (error) {
-      ctx.throw(500, error.message);
+      console.error('Email send failed:', error);
+
+      const statusCode = error.name === 'TimeoutError' ? 504
+        : error.$metadata?.httpStatusCode === 429 ? 429
+          : 500;
+
+      ctx.status = statusCode;
+      ctx.send({
+        code: error.name || 'EMAIL_SEND_FAILED',
+        message: 'Failed to send email',
+        details: statusCode === 429 ? 'Too many requests' : error.message,
+        timestamp: new Date().toISOString()
+      });
     }
   },
 };
