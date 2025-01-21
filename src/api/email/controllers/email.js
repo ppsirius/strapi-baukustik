@@ -35,7 +35,7 @@ module.exports = {
       ctx.request.body;
 
     const to = process.env.CONTACT_EMAIL_TO;
-    const from = "Contact form <info@baukustik.com>";
+    const from = `Contact form <${process.env.CONTACT_EMAIL_TO}>`;
 
     const emailBody = createEmailBody(
       formName,
