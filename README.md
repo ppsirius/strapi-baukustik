@@ -15,6 +15,9 @@ donwload tar from s3, unzip to folder backup, run
 ``` sh backup/restore.sh```
 
 
+## Strapi status
+```https://status.railway.com/```
+
 # Strapi example
 
 This example deploys self-hosted version of [Strapi](https://strapi.io/). Internally it uses a PostgreSQL database to store the data.
