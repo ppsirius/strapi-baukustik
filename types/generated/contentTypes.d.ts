@@ -1155,8 +1155,20 @@ export interface ApiPagePage extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+        translate: {
+          translate: 'translate';
+        };
       }>;
-    slug: Attribute.String & Attribute.Required;
+    slug: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: '';
+        };
+      }>;
     sections: Attribute.DynamicZone<
       [
         'sections.block1',
@@ -1197,11 +1209,17 @@ export interface ApiPagePage extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+        translate: {
+          translate: 'translate';
+        };
       }>;
     description: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+        translate: {
+          translate: 'translate';
         };
       }>;
     category: Attribute.String &
@@ -1209,17 +1227,26 @@ export interface ApiPagePage extends Schema.CollectionType {
         i18n: {
           localized: true;
         };
+        translate: {
+          translate: 'translate';
+        };
       }>;
     subCategory: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
+        translate: {
+          translate: 'translate';
+        };
       }>;
     title: Attribute.String &
       Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
+        };
+        translate: {
+          translate: 'translate';
         };
       }>;
     createdAt: Attribute.DateTime;
@@ -1249,37 +1276,170 @@ export interface ApiRealizationRealization extends Schema.CollectionType {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    header: Attribute.String & Attribute.Required & Attribute.Unique;
-    slug: Attribute.UID<'api::realization.realization', 'header'> &
-      Attribute.Required;
+    header: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    slug: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        translate: {
+          translate: 'translate';
+        };
+        i18n: {
+          localized: true;
+        };
+      }>;
     headerAs: Attribute.Enumeration<['h1', 'h2', 'h3', 'h4', 'h5', 'h6']> &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
       Attribute.DefaultTo<'h2'>;
     headerColor: Attribute.Enumeration<
       ['white', 'green', 'black', 'gray', 'light-gray', 'very-light-gray']
     > &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
       Attribute.DefaultTo<'white'>;
-    date: Attribute.String & Attribute.Required;
-    localization: Attribute.String & Attribute.Required;
-    area: Attribute.String & Attribute.Required;
-    author: Attribute.String;
-    authorLink: Attribute.String;
-    photoAuthor: Attribute.String;
-    photoAuthorLink: Attribute.String;
-    coverImage: Attribute.Media & Attribute.Required;
-    images: Attribute.Media & Attribute.Required;
+    date: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    localization: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    area: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    author: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    authorLink: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    photoAuthor: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    photoAuthorLink: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    coverImage: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
+    images: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     products: Attribute.JSON &
       Attribute.Required &
       Attribute.CustomField<
         'plugin::multi-select.multi-select',
         ['Sonaspray', 'Sonacoustic', 'Soundblox', 'EWES', 'ZIPS', 'GreenWall']
       >;
-    metaDescription: Attribute.String;
+    metaDescription: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }>;
     description: Attribute.Text &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }> &
       Attribute.DefaultTo<'Opis dodatkowy projektu. W tym miejscu opowiadamy architektom, jak za pomoc\u0105 oferowanych przez nas produkt\u00F3w i us\u0142ug uda\u0142o si\u0119 zaprojektowa\u0107 wn\u0119trze, kt\u00F3re w innym wypadku by\u0142oby straszne akustycznie, brzydkie lub drogie. Ciekawostki lub warto\u015Bciowe informacje know-how, kt\u00F3re mog\u0105 pom\u00F3c w formowaniu kolejnej realizacji/sprzeda\u017Cy podobnego typu s\u0105 tu jak najbardziej na miejscu.'>;
     navigationHeader: Attribute.String &
       Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+        translate: {
+          translate: 'translate';
+        };
+      }> &
       Attribute.DefaultTo<'Zobacz wszystkie realizacje \u2192'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1296,6 +1456,12 @@ export interface ApiRealizationRealization extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::realization.realization',
+      'oneToMany',
+      'api::realization.realization'
+    >;
+    locale: Attribute.String;
   };
 }
 

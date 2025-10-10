@@ -22,13 +22,23 @@
       "pluginOptions": {
         "i18n": {
           "localized": true
+        },
+        "translate": {
+          "translate": "translate"
         }
       }
     },
     "slug": {
       "type": "string",
-      "targetField": "pageName",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": ""
+        }
+      }
     },
     "sections": {
       "type": "dynamiczone",
@@ -69,6 +79,9 @@
       "pluginOptions": {
         "i18n": {
           "localized": true
+        },
+        "translate": {
+          "translate": "translate"
         }
       }
     },
@@ -77,6 +90,9 @@
       "pluginOptions": {
         "i18n": {
           "localized": true
+        },
+        "translate": {
+          "translate": "translate"
         }
       }
     },
@@ -85,6 +101,9 @@
       "pluginOptions": {
         "i18n": {
           "localized": true
+        },
+        "translate": {
+          "translate": "translate"
         }
       }
     },
@@ -93,6 +112,9 @@
       "pluginOptions": {
         "i18n": {
           "localized": true
+        },
+        "translate": {
+          "translate": "translate"
         }
       }
     },
@@ -101,6 +123,9 @@
       "pluginOptions": {
         "i18n": {
           "localized": true
+        },
+        "translate": {
+          "translate": "translate"
         }
       }
     }

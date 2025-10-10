@@ -10,17 +10,37 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "header": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "slug": {
-      "type": "uid",
+      "type": "string",
       "targetField": "header",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "translate": {
+          "translate": "translate"
+        },
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "headerAs": {
       "type": "enumeration",
@@ -33,7 +53,12 @@
         "h6"
       ],
       "default": "h2",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "headerColor": {
       "type": "enumeration",
@@ -45,31 +70,92 @@
         "light-gray",
         "very-light-gray"
       ],
-      "default": "white"
+      "default": "white",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "date": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "localization": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "area": {
       "type": "string",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "author": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "authorLink": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "photoAuthor": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "photoAuthorLink": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "coverImage": {
       "type": "media",
@@ -77,7 +163,15 @@
       "required": true,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "images": {
       "type": "media",
@@ -85,7 +179,15 @@
       "required": true,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "products": {
       "type": "customField",
@@ -101,16 +203,40 @@
       "customField": "plugin::multi-select.multi-select"
     },
     "metaDescription": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "description": {
       "type": "text",
-      "default": "Opis dodatkowy projektu. W tym miejscu opowiadamy architektom, jak za pomocą oferowanych przez nas produktów i usług udało się zaprojektować wnętrze, które w innym wypadku byłoby straszne akustycznie, brzydkie lub drogie. Ciekawostki lub wartościowe informacje know-how, które mogą pomóc w formowaniu kolejnej realizacji/sprzedaży podobnego typu są tu jak najbardziej na miejscu."
+      "default": "Opis dodatkowy projektu. W tym miejscu opowiadamy architektom, jak za pomocą oferowanych przez nas produktów i usług udało się zaprojektować wnętrze, które w innym wypadku byłoby straszne akustycznie, brzydkie lub drogie. Ciekawostki lub wartościowe informacje know-how, które mogą pomóc w formowaniu kolejnej realizacji/sprzedaży podobnego typu są tu jak najbardziej na miejscu.",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     },
     "navigationHeader": {
       "type": "string",
       "default": "Zobacz wszystkie realizacje →",
-      "required": true
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        },
+        "translate": {
+          "translate": "translate"
+        }
+      }
     }
   }
 }
