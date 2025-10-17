@@ -5,42 +5,37 @@ const name = pluginPkg.strapi.name;
 
 export default {
   register(app) {
-    // Register the preview button hook
-    app.registerHook('plugin/preview-button/before-build-url', ({ data, draft, published, uid }) => {
-      console.log('Preview button hook called for:', uid, data);
-
+    app.registerHook('plugin/preview-button/before-build-url', ({ data, draft, published }) => {
       const locale = data.locale || 'pl';
       const isEnglish = locale === 'en';
       const localePrefix = isEnglish ? '/en' : '';
 
-      const pathParts = [
-        data.category || '',
-        data.subCategory || '',
-        data.slug || ''
-      ].filter(Boolean);
+      // Detect content type: realizations only have slug, pages have category/subcategory
+      const isRealization = !data.category && !data.subCategory && data.slug;
 
-      const pathString = pathParts.join('/');
+      // Build the appropriate path based on content type
+      let path;
+      if (isRealization) {
+        // Realization URLs: /realizacje/{slug} (pl) or /en/realizations/{slug} (en)
+        const realizationPath = isEnglish ? 'realizations' : 'realizacje';
+        path = `${localePrefix}/${realizationPath}/${data.slug}`;
+      } else {
+        // Page URLs: /{category}/{subcategory}/{slug} (pl) or /en/{category}/{subcategory}/{slug} (en)
+        const pathParts = [data.category, data.subCategory, data.slug].filter(Boolean);
+        const pathString = pathParts.join('/');
+        path = `${localePrefix}/${pathString}`;
+      }
 
-      const newDraft = draft ? {
-        ...draft,
-        query: {
-          ...draft.query,
-          slug: pathString,
-          locale: locale,
+      // Use the base URL from the published config (comes from plugins.js env("PREVIEW_DOMAIN"))
+      const baseUrl = published?.url || 'https://baukustik.com';
+
+      return {
+        draft: null,
+        published: {
+          ...published,
+          url: `${baseUrl}${path}`,
         },
-      } : null;
-
-      const newPublished = published ? {
-        ...published,
-        url: `http://localhost:4321${localePrefix}${pathString ? '/' + pathString : ''}`
-      } : null;
-
-      console.log('Generated URLs:', {
-        draft: newDraft?.url,
-        published: newPublished?.url
-      });
-
-      return { draft: newDraft, published: newPublished };
+      };
     });
 
     app.registerPlugin({
@@ -49,5 +44,5 @@ export default {
     });
   },
 
-  bootstrap(app) { },
+  bootstrap() { },
 };

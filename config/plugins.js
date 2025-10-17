@@ -16,6 +16,12 @@ module.exports = ({ env }) => ({
             url: env("PREVIEW_DOMAIN"),
           },
         },
+        {
+          uid: 'api::realization.realization',
+          published: {
+            url: env("PREVIEW_DOMAIN"),
+          },
+        },
       ],
     },
   },
@@ -24,7 +30,7 @@ module.exports = ({ env }) => ({
     resolve: './src/plugins/preview-helper',
   },
   translate: {
-    enabled: true,
+    enabled: false,
     config: {
       provider: 'deepl',
       providerOptions: {
