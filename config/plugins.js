@@ -7,6 +7,22 @@ module.exports = ({ env }) => ({
   navigation: {
     enabled: true,
   },
+  'preview-button': {
+    config: {
+      contentTypes: [
+        {
+          uid: 'api::page.page',
+          published: {
+            url: env("PREVIEW_DOMAIN"),
+          },
+        },
+      ],
+    },
+  },
+  'preview-helper': {
+    enabled: true,
+    resolve: './src/plugins/preview-helper',
+  },
   translate: {
     enabled: true,
     config: {
