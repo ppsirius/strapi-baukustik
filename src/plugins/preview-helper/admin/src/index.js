@@ -32,9 +32,7 @@ export default {
 
       const newPublished = published ? {
         ...published,
-        url: uid === 'api::home.home'
-          ? `http://localhost:4321${localePrefix}`
-          : `http://localhost:4321${localePrefix}${pathString ? '/' + pathString : ''}`
+        url: `http://localhost:4321${localePrefix}${pathString ? '/' + pathString : ''}`
       } : null;
 
       console.log('Generated URLs:', {
@@ -51,26 +49,5 @@ export default {
     });
   },
 
-  bootstrap(app) {},
-  async registerTrads({ locales }) {
-    const importedTrads = await Promise.all(
-      locales.map((locale) => {
-        return import(`./translations/${locale}.json`)
-          .then(({ default: data }) => {
-            return {
-              data: prefixPluginTranslations(data, pluginId),
-              locale,
-            };
-          })
-          .catch(() => {
-            return {
-              data: {},
-              locale,
-            };
-          });
-      })
-    );
-
-    return Promise.resolve(importedTrads);
-  },
+  bootstrap(app) { },
 };
