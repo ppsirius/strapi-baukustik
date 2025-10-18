@@ -1096,6 +1096,9 @@ export interface ApiPagePage extends Schema.CollectionType {
     draftAndPublish: true;
   };
   pluginOptions: {
+    'preview-button': {
+      listViewColumn: true;
+    };
     i18n: {
       localized: true;
     };
