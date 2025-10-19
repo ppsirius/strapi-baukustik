@@ -23,11 +23,11 @@
       "type": "string",
       "required": true,
       "pluginOptions": {
-        "i18n": {
-          "localized": true
-        },
         "translate": {
           "translate": "translate"
+        },
+        "i18n": {
+          "localized": true
         }
       }
     },
@@ -35,11 +35,11 @@
       "type": "string",
       "required": true,
       "pluginOptions": {
-        "i18n": {
-          "localized": true
-        },
         "translate": {
           "translate": ""
+        },
+        "i18n": {
+          "localized": true
         }
       }
     },
@@ -80,55 +80,55 @@
         "sections.references"
       ],
       "pluginOptions": {
-        "i18n": {
-          "localized": true
-        },
         "translate": {
           "translate": "translate"
+        },
+        "i18n": {
+          "localized": true
         }
       }
     },
     "description": {
       "type": "string",
       "pluginOptions": {
-        "i18n": {
-          "localized": true
-        },
         "translate": {
           "translate": "translate"
+        },
+        "i18n": {
+          "localized": true
         }
       }
     },
     "category": {
       "type": "string",
       "pluginOptions": {
-        "i18n": {
-          "localized": true
-        },
         "translate": {
           "translate": "translate"
+        },
+        "i18n": {
+          "localized": true
         }
       }
     },
     "subCategory": {
       "type": "string",
       "pluginOptions": {
-        "i18n": {
-          "localized": true
-        },
         "translate": {
           "translate": "translate"
+        },
+        "i18n": {
+          "localized": true
         }
       }
     },
     "title": {
       "type": "string",
       "pluginOptions": {
-        "i18n": {
-          "localized": true
-        },
         "translate": {
           "translate": "translate"
+        },
+        "i18n": {
+          "localized": true
         }
       }
     }

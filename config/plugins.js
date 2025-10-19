@@ -30,14 +30,14 @@ module.exports = ({ env }) => ({
     resolve: './src/plugins/preview-helper',
   },
   translate: {
-    enabled: false,
+    enabled: true,
     config: {
       provider: 'deepl',
       providerOptions: {
         // your API key - required and wil cause errors if not provided
-        apiKey: '1cc8a6c6-3316-4200-a599-0114d1a0af49:fx',
+        apiKey: env("DEEPL_API"),
         // use custom api url - optional
-        apiUrl: 'https://api-free.deepl.com',
+        apiUrl: 'https://api.deepl.com',
         // use custom locale mapping (for example 'en' locale is deprecated so need to choose between 'EN-GB' and 'EN-US')
         localeMap: {
           // use uppercase here!
