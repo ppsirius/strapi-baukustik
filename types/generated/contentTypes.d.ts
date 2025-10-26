@@ -952,103 +952,6 @@ export interface PluginNavigationNavigationsItemsRelated
   };
 }
 
-export interface PluginTranslateBatchTranslateJob
-  extends Schema.CollectionType {
-  collectionName: 'translate_batch_translate_jobs';
-  info: {
-    singularName: 'batch-translate-job';
-    pluralName: 'batch-translate-jobs';
-    displayName: 'Translate Batch Translate Job';
-  };
-  options: {
-    draftAndPublish: false;
-    comment: '';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    contentType: Attribute.String;
-    sourceLocale: Attribute.String;
-    targetLocale: Attribute.String;
-    entityIds: Attribute.JSON;
-    status: Attribute.Enumeration<
-      [
-        'created',
-        'setup',
-        'running',
-        'paused',
-        'finished',
-        'cancelled',
-        'failed'
-      ]
-    > &
-      Attribute.DefaultTo<'created'>;
-    failureReason: Attribute.JSON;
-    progress: Attribute.Float & Attribute.DefaultTo<0>;
-    autoPublish: Attribute.Boolean & Attribute.DefaultTo<false>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'plugin::translate.batch-translate-job',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'plugin::translate.batch-translate-job',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface PluginTranslateUpdatedEntry extends Schema.CollectionType {
-  collectionName: 'translate_updated_entries';
-  info: {
-    singularName: 'updated-entry';
-    pluralName: 'updated-entries';
-    displayName: 'Translate updated Entry';
-  };
-  options: {
-    draftAndPublish: false;
-    comment: '';
-  };
-  pluginOptions: {
-    'content-manager': {
-      visible: false;
-    };
-    'content-type-builder': {
-      visible: false;
-    };
-  };
-  attributes: {
-    contentType: Attribute.String;
-    groupID: Attribute.String;
-    localesWithUpdates: Attribute.JSON;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'plugin::translate.updated-entry',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'plugin::translate.updated-entry',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface PluginI18NLocale extends Schema.CollectionType {
   collectionName: 'i18n_locale';
   info: {
@@ -1541,8 +1444,6 @@ declare module '@strapi/types' {
       'plugin::navigation.navigation': PluginNavigationNavigation;
       'plugin::navigation.navigation-item': PluginNavigationNavigationItem;
       'plugin::navigation.navigations-items-related': PluginNavigationNavigationsItemsRelated;
-      'plugin::translate.batch-translate-job': PluginTranslateBatchTranslateJob;
-      'plugin::translate.updated-entry': PluginTranslateUpdatedEntry;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::employe.employe': ApiEmployeEmploye;
       'api::page.page': ApiPagePage;

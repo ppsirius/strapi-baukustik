@@ -30,7 +30,7 @@ module.exports = ({ env }) => ({
     resolve: './src/plugins/preview-helper',
   },
   translate: {
-    enabled: true,
+    enabled: false,
     config: {
       provider: 'deepl',
       providerOptions: {
