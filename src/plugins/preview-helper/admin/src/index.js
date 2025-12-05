@@ -20,12 +20,12 @@ export default {
       if (isRealization) {
         // Realization URLs: /realizacje/{slug} (pl) or /en/realizations/{slug} (en)
         const realizationPath = isEnglish ? 'realizations' : 'realizacje';
-        path = `${localePrefix}/${realizationPath}/${data.slug}`;
+        path = `${localePrefix}/${realizationPath}/${data.slug}`.toLowerCase();
       } else {
         // Page URLs: /{category}/{subcategory}/{slug} (pl) or /en/{category}/{subcategory}/{slug} (en)
         const pathParts = [data.category, data.subCategory, data.slug].filter(Boolean);
         const pathString = pathParts.join('/');
-        path = `${localePrefix}/${pathString}`;
+        path = `${localePrefix}/${pathString}`.toLowerCase();
       }
 
       // Use the base URL from the published config (comes from plugins.js env("PREVIEW_DOMAIN"))
