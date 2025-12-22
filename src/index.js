@@ -19,7 +19,15 @@ module.exports = {
    * run jobs, or perform some special logic.
    */
 
-  async bootstrap() { }
+  async bootstrap({ strapi }) {
+    try {
+      // Programmatically create/update the GitHub webhook on bootstrap
+      const setUpGithubWebhook = require('./util/set-up-github-webhook');
+      await setUpGithubWebhook(strapi);
+    } catch (err) {
+      strapi.log.error('Failed to set up GitHub webhook:', err);
+    }
+  }
   // ping db check
   // async bootstrap({ strapi }) {
   //   const knex = strapi.db.connection;
