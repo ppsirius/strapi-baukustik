@@ -4,8 +4,7 @@ const { CONFIG } = require('../../../config');
 const DEBOUNCE_MS = Number(process.env.GITHUB_DEBOUNCE_MS || 20000);
 const GITHUB_API_VERSION = 'application/vnd.github.v3+json';
 
-// In-memory debounce timers (per event_type)
-const debounceTimers = new Map();
+
 
 /**
  * Build GitHub authorization header
@@ -111,30 +110,7 @@ const dispatchToGitHub = async (payload) => {
   }
 };
 
-/**
- * Schedule a debounced dispatch
- * @param {string} eventType - GitHub event type
- * @param {object} payload - Full dispatch payload
- */
-const scheduleDispatch = (eventType, payload) => {
-  // Clear existing timer if present
-  if (debounceTimers.has(eventType)) {
-    clearTimeout(debounceTimers.get(eventType));
-    console.info(`⟳ Debounce timer reset for event: ${eventType}`);
-  }
 
-  const timer = setTimeout(async () => {
-    debounceTimers.delete(eventType);
-    console.info(`→ Dispatching event: ${eventType}`);
-    try {
-      await dispatchToGitHub(payload);
-    } catch (err) {
-      // Error already logged in dispatchToGitHub
-    }
-  }, DEBOUNCE_MS);
-
-  debounceTimers.set(eventType, timer);
-};
 
 module.exports = {
   async post(ctx, next) {
@@ -166,8 +142,8 @@ module.exports = {
       payload.client_payload = ctx.request.body;
     }
 
-    // Schedule debounced dispatch
-    scheduleDispatch(eventType, payload);
+    // Immediately dispatch to GitHub (no debounce)
+    dispatchToGitHub(payload);
 
     // Return immediate response
     ctx.response.status = 202;
